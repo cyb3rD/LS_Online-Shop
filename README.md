@@ -1,11 +1,12 @@
 About:
-This is my boilerplate for html5 using Jade, Sass, BEM-naming.
+This is my example of simple OnlineShop
+Here i'm learning using Jade, Sass, BEM-naming.
 
 Install instructions:
 
-1. git clone  https://github.com/cyb3rD/jade-sass-template myBoilerplate
-2. cd myBoilerplate
+1. git clone  https://github.com/cyb3rD/LS_Online-Shop.git OnlineShop
+2. cd OnlineShop
 3. npm i (or you can link existing modules)
 4. bower i
 
-And start your project...
+Run gulp with default task and see what you have

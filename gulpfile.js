@@ -17,20 +17,20 @@ var paths = {
 	},
 
 	scss : {
-		location	: 'styles/**/*.scss',
-		entryPoint	: 'css/main.css'
+		location	: 'app/styles/**/*.scss',
+		entryPoint	: 'app/css/main.css'
 	},
 
 	compass : {
 		configFile	: 'config.rb',
-		cssFolder	: 'css',
-		scssFolder	: 'styles',
-		imgFolder	: 'img'
+		cssFolder	: 'app/css',
+		scssFolder	: 'app/styles',
+		imgFolder	: 'app/img'
 	},
 
 	jade: {
 		location	: 'app/layout/**/*.jade',
-		compiled	: 'app/layout/*.jade',
+		compiled	: 'app/layout/_pages/*.jade',
 		destination : 'app'
 		}
 }
@@ -49,6 +49,7 @@ gulp.task('jade', function() {
 gulp.task('server', function () {
 	browserSync.init({
 		port : paths.browserSync.serverPort,
+		//tunnel: 'test3',
 		server: {
 			baseDir: paths.browserSync.baseDir
 		}
@@ -70,6 +71,7 @@ gulp.task('compass', function() {
 // Watch (Jade + BrowserSync reload
 gulp.task('watch', function () {
 	gulp.watch(paths.jade.location, ['jade']);
+	gulp.watch(paths.scss.location, ['compass']);
 
 	gulp.watch (paths.watchDirs.watchPaths).on('change', browserSync.reload);
 });

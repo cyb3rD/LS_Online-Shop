@@ -1,0 +1,40 @@
+doctype html
+html(lang="Ru-ru")
+    head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(meta name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="description" content="Cooltech интернет магазин")
+    meta(name="keywords" content="планшеты, ноутбуки, смартфоны")
+    meta(name="author" content="Nikolay Ignatyev")
+    title
+    // Bower CSS
+    link(rel="stylesheet" href="bower/normalize-css/normalize.css")
+    // Dev CSS
+    link(rel="stylesheet" href="css/main.css")
+    // Fonts & favicon
+    link(rel="stylesheet" href="fonts/opensans/opensans.css")
+    link(rel="icon" type="image/png" href="img/favicon.png")
+    // build:js js/modernizr.min.js
+    script(type="text/javascript" src="bower/modernizr/modernizr.js")
+    // endbuild
+    body
+        <!--[if lt IE 7]>
+        <p class="browsehappy">Вы используете <strong>устаревший</strong>браузер.Пожалуйста,
+        <a href="http://browsehappy.com">обновите</a> его.</p>
+        <![endif]-->
+        .wrapper
+            .maincontent
+                //- include Header Area with navigation
+                include _common/header
+
+
+                // Sidebar with filter
+                .content-wrapper
+                    .container
+                        aside.filter Фильтр
+                        | Content of the page with mobile phones mobiles.jade
+
+        include _common/footer
+
+        script(type="text/javascript" src="bower/jquery/jquery.min.js")

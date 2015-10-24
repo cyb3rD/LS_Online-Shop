@@ -1,0 +1,40 @@
+header.header
+   .top-contacts
+      .container
+         // Social icons
+         ul.socials.socials_header
+            li.socials__item
+               a(href="#").link-fb fb
+            li.socials__item
+               a(href="#").link-vk vk
+            li.socials__item
+               a(href="#").link-tw tw
+         // Contacts
+         ul.contacts
+            li.contacts__address ул. Маяковская 6, офис 17
+            li.contacts__phone +7 (921) 123-12-13
+         // Logo image
+
+   .header-2
+      .container
+         .logo.header-logo
+            a.logo-link(href="/")
+               img.logo-pic(src="/img/cooltech-header-logo.png" alt="cooltech logo")
+               span.logo-text
+         // Search area
+         form(method="post" action="/").search-form
+            input(type="text" placeholder="Что будем искать").search-input
+            button(type="button" value="submit").search-button  Найти
+         //  Just list in header
+
+         ul.links.links_header
+            li.links__item
+               a(href="#").link Карта проезда
+            li.links__item
+               a(href="#").link История заказов
+            li.links__item
+               a(href="#").link Корзина
+
+   .top-nav
+      .container
+         include nav

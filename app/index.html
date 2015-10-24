@@ -4,27 +4,102 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content=" ">
-	<meta name="keywords" content=" ">
-	<meta name="author" content="N ">
+	<meta name="description" content="Cooltech интернет магазин">
+	<meta name="keywords" content="планшеты, ноутбуки, смартфоны">
+	<meta name="author" content="Nikolay Ignatyev">
 	<title></title>
 	<!-- Bower CSS-->
 	<link rel="stylesheet" href="bower/normalize-css/normalize.css">
 	<!-- Dev CSS-->
 	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/content.css">
 	<!-- Fonts & favicon-->
-	<link rel="stylesheet" href="fonts/fira/fira.css">
+	<link rel="stylesheet" href="fonts/opensans/opensans.css">
 	<link rel="icon" type="image/png" href="img/favicon.png">
 	<!-- build:js js/modernizr.min.js-->
 	<script type="text/javascript" src="bower/modernizr/modernizr.js"></script>
 	<!-- endbuild-->
 	<body>
+		<!--[if lt IE 7]>
+		<p class="browsehappy">Вы используете <strong>устаревший</strong>браузер.Пожалуйста,
+		<a href="http://browsehappy.com">обновите</a> его.</p>
+		<![endif]-->
 		<div class="wrapper">
 			<div class="maincontent">
-				<header class="header"></header>
+				<header class="header">
+					<div class="top-contacts">
+						<div class="container">
+							<!-- Social icons-->
+							<ul class="socials socials_header">
+								<li class="socials__item"><a href="#" class="link-fb">fb</a></li>
+								<li class="socials__item"><a href="#" class="link-vk">vk</a></li>
+								<li class="socials__item"><a href="#" class="link-tw">tw</a></li>
+							</ul>
+							<!-- Contacts-->
+							<ul class="contacts">
+								<li class="contacts__address">ул. Маяковская 6, офис 17</li>
+								<li class="contacts__phone">+7 (921) 123-12-13</li>
+							</ul>
+							<!-- Logo image-->
+						</div>
+					</div>
+					<div class="header-2">
+						<div class="container">
+							<div class="logo header-logo"><a href="/" class="logo-link"><img src="/img/cooltech-header-logo.png" alt="cooltech logo" class="logo-pic"><span class="logo-text"></span></a></div>
+							<!-- Search area-->
+							<form method="post" action="/" class="search-form">
+								<input type="text" placeholder="Что будем искать" class="search-input">
+								<button type="button" value="submit" class="search-button"> Найти</button>
+							</form>
+							<!--  Just list in header-->
+							<ul class="links links_header">
+								<li class="links__item"><a href="#" class="link">Карта проезда</a></li>
+								<li class="links__item"><a href="#" class="link">История заказов</a></li>
+								<li class="links__item"><a href="#" class="link">Корзина</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="top-nav">
+						<div class="container">
+							<nav class="nav">
+								<ul class="nav_list">
+									<li class="nav_item"><a href="#" class="nav_link">Планшеты</a></li>
+									<li class="nav_item nav_item--current"><a href="#" class="nav_link">Мобильные телефоны</a></li>
+									<li class="nav_item"><a href="#" class="nav_link">Mp3-плееры</a></li>
+									<li class="nav_item"><a href="#" class="nav_link">Персональные компьютеры</a></li>
+									<li class="nav_item"><a href="#" class="nav_link">Ноутбуки</a></li>
+									<li class="nav_item"><a href="#" class="nav_link">Аксессуары</a></li>
+									<li class="nav_item"><a href="#" class="nav_link">Бытовая техника</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</header>
+				<!-- Sidebar with filter-->
+				<div class="content-wrapper">
+					<div class="container">
+						<aside class="filter">Фильтр</aside>Content of the page with mobile phones mobiles.jade
+					</div>
+				</div>
 			</div>
 		</div>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer-content">Футер</div>
+				<div class="logo">
+					<div class="logo-footer">Logo in footer</div>
+				</div>
+				<div class="socials socials_footer">
+					<div class="social__fb">fb</div>
+					<div class="social__vk">vk</div>
+					<div class="social__tw">tw</div>
+				</div>
+				<ul class="links links_footer">
+					<li class="links__item"><a href="#" class="link">Footer Link #1</a></li>
+					<li class="links__item_footer"><a href="#" class="link_footer">Footer Link #2</a></li>
+				</ul>
+				<div class="copyright">&copy;Copyright</div>
+			</div>
+		</footer>
 		<script type="text/javascript" src="bower/jquery/jquery.min.js"></script>
 	</body>
 </html>
