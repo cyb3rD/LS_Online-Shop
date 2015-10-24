@@ -1,0 +1,24 @@
+.breadcrumbs {
+  margin-bottom: 35px;
+  display: inline-block;
+}
+
+.breadcrumbs_item {
+  display: inline-block;
+}
+
+.breadcrumbs_link {
+  text-decoration: none;
+  color: #333333;
+}
+
+.breadcrumbs_link--location {
+  color: #ff6708;
+  text-decoration: underline;
+}
+
+.breadcrumbs_section-name {
+  font-family: OpenSansBold;
+  font-size: 20px;
+  color: #333333;
+}

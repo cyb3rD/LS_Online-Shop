@@ -27,12 +27,14 @@ html(lang="Ru-ru")
             .maincontent
                 //- include Header Area with navigation
                 include _common/header
-
-
-                // Sidebar with filter
-                .content-wrapper
-                    .container
-                        aside.filter Фильтр
+                .container
+                    aside.left-sidebar
+                        //- include Breadcrumbs & Product Filter
+                        include _common/breadcrumbs
+                        include _commnon/product-filter
+                    // Sidebar with filter
+                    aside.list-content
+                        aside.right-filter Сортировать по Вид каталога
                         | Content of the page with mobile phones mobiles.jade
 
         include _common/footer

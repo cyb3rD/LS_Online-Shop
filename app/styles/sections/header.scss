@@ -3,6 +3,7 @@ $header1-height     : 77px;
 $header2-height     : 96px;
 .header {
   height: $header-height;
+  margin-bottom: 35px;
 }
 
 .top-contacts {
@@ -156,22 +157,7 @@ $header2-height     : 96px;
 .nav_item {
   display: inline-block;
   margin-right: -4px;
-
- /* &.nav_item--current {
-    background-color: #ff6708;
-    color: white;
-    font-family: OpenSansSemiBold;
-    font-size: 16px;
-  }*/
-
-
-
 }
-
-/*.nav_item.nav_item--current {
-  background-color: #ff6708;
-
-}*/
 
 .nav_item.nav_item--current .nav_link {
   background-color: #ff6708;

@@ -1,5 +1,6 @@
 .header {
   height: 220px;
+  margin-bottom: 35px;
 }
 
 .top-contacts {
@@ -133,18 +134,8 @@
 .nav_item {
   display: inline-block;
   margin-right: -4px;
-  /* &.nav_item--current {
-     background-color: #ff6708;
-     color: white;
-     font-family: OpenSansSemiBold;
-     font-size: 16px;
-   }*/
 }
 
-/*.nav_item.nav_item--current {
-  background-color: #ff6708;
-
-}*/
 .nav_item.nav_item--current .nav_link {
   background-color: #ff6708;
   color: white;
