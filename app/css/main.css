@@ -767,10 +767,25 @@ p {
   text-decoration: underline;
 }
 
-.breadcrumbs_section-name {
-  font-family: OpenSansBold;
-  font-size: 20px;
-  color: #333333;
+.important-col-1 {
+  float: left;
+  width: 535px;
+  margin-bottom: 30px;
+}
+
+.important-col-2 {
+  float: right;
+  width: 535px;
+  margin-bottom: 30px;
+}
+
+.important-text {
+  text-align: justify;
+  line-height: 20px;
+  font-family: OpenSansRegular;
+  font-size: 14px;
+  padding-top: 20px;
+  text-indent: 38px;
 }
 
 .footer {
@@ -839,4 +854,10 @@ p {
   float: right;
   width: 743px;
   padding-top: 89px;
+}
+
+.section-name {
+  font-family: OpenSansBold;
+  font-size: 20px;
+  color: #333333;
 }

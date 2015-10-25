@@ -10,6 +10,8 @@
 
 @import "sections/breadcrumbs";
 
+@import "sections/important-info";
+
 @import "sections/footer";
 
 .left-sidebar {
@@ -21,4 +23,9 @@
   float: right;
   width: 743px;
   padding-top: 89px;
+}
+.section-name {
+  font-family: OpenSansBold;
+  font-size: 20px;
+  color: #333333;
 }
