@@ -10,6 +10,8 @@
 
 @import "sections/breadcrumbs";
 
+@import "sections/product-filter";
+
 @import "sections/important-info";
 
 @import "sections/footer";
@@ -28,4 +30,7 @@
   font-family: OpenSansBold;
   font-size: 20px;
   color: #333333;
+}
+.section-name--mobile {
+  margin-bottom: 165px;
 }

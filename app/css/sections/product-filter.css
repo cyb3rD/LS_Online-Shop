@@ -1,0 +1,92 @@
+.filter {
+  background-color: #fbfbfb;
+  border: 1px solid #dee1e4;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.filter_group {
+  padding-left: 30px;
+  padding-top: 17px;
+  border-bottom: 1px solid #dee1e4;
+  padding-bottom: 22px;
+}
+
+.filter_group:last-child {
+  margin-bottom: -2px;
+}
+
+.filter_header {
+  font-family: OpenSansSemiBold;
+  font-size: 17px;
+}
+
+.filter_options {
+  font-family: OpenSansRegular;
+  font-size: 14px;
+}
+
+.filter_options_color_item {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #dee1e4;
+  margin: 22px 22px 0 0;
+}
+
+.item_color--selected {
+  border: 3px solid #ff6600;
+  width: 33px;
+  height: 33px;
+}
+
+.item_color--blue {
+  background-color: #0a3153;
+}
+
+.item_color--white {
+  background-color: #ffffff;
+}
+
+.item_color--grey {
+  background-color: #cccccc;
+}
+
+.item_color--black {
+  background-color: #000000;
+}
+
+.item_color--red {
+  background-color: #ff1800;
+}
+
+.item_color--yellow {
+  background-color: #fff343;
+}
+
+.item_color--orange {
+  background-color: #fb914a;
+}
+
+.item_color--green {
+  background-color: #92c37c;
+}
+
+.item_color--cyan {
+  background-color: #40a6ff;
+}
+
+.item_color--violet {
+  background-color: #9870ad;
+}
+
+.item_color--pink {
+  background-color: #dc78ad;
+}
+
+.item_color--brown {
+  background-color: #7f401d;
+}
