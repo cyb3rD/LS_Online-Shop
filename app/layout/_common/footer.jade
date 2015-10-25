@@ -1,18 +1,36 @@
 footer.footer
    .container
-      .footer-content Футер
-      .logo
-         .logo-footer Logo in footer
-      //- socials_footer - модифицирует блок
-      .socials.socials_footer
-         .social__fb fb
-         .social__vk vk
-         .social__tw tw
+      .footer-left
+         .logo.footer-logo
+            a.logo-link(href="/")
+               img.logo-pic(src="/img/cooltech-footer-logo.png" alt="cooltech logo")
+               span.logo-text
+         //- socials_footer - модифицирует блок
 
-      //- переписать как отдельный блок для ссылок в футере
-      ul.links.links_footer
-         li.links__item
-            a(href="#").link Footer Link #1
-         li.links__item_footer
-            a(href="#").link_footer Footer Link #2
-      .copyright &copy;Copyright
+      .footer-right
+         ul.socials.socials--footer
+            li.socials__item.socials__item--footer
+               a(href="#").link-fb.link--footer fb
+            li.socials__item.socials__item--footer
+               a(href="#").link-vk.link--footer vk
+            li.socials__item.socials__item--footer
+               a(href="#").link-tw.link--footer tw
+
+         //- переписать как отдельный блок для ссылок в футере
+         ul.links_footer
+            li.links__item.links__item_footer
+               a(href="#").link_footer Планшеты
+            li.links__item.links__item_footer
+               a(href="#").link_footer Мобильные телефоны
+            li.links__item.links__item_footer
+               a(href="#").link_footer Mp3-плееры
+            li.links__item.links__item_footer
+               a(href="#").link_footer Персональные компьютеры
+            li.links__item.links__item_footer
+               a(href="#").link_footer Ноутбуки
+            li.links__item.links__item_footer
+               a(href="#").link_footer Аксессуары
+            li.links__item.links__item_footer
+               a(href="#").link_footer Бытовая техника
+
+   .copyright All rights reserved. 2015. no copy allowed

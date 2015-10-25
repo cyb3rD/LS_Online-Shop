@@ -1,6 +1,7 @@
 $header-height      : 220px;
 $header1-height     : 77px;
 $header2-height     : 96px;
+
 .header {
   height: $header-height;
   margin-bottom: 35px;
@@ -17,7 +18,7 @@ $header2-height     : 96px;
   margin: 0px;
   padding: 0px;
 
-  &.socials_header {
+  &.socials--header {
     /*position: absolute;
     left: 0;
     top: 25px;*/
@@ -25,19 +26,20 @@ $header2-height     : 96px;
     min-width: 126px;
   }
 
-  .socials__item {
-    display: inline-block;
-    height: 26px;
-    width: 30px;
-    margin-left: 16px;
-  }
-
-  .socials__item:first-child {
-    margin-left: 0px;
-  }
-  /* TODO - sprites for social icons */
-
 }
+
+.socials__item {
+  display: inline-block;
+  height: 26px;
+  width: 30px;
+  margin-left: 16px;
+}
+
+.socials__item:first-child {
+  margin-left: 0px;
+}
+/* TODO - sprites for social icons */
+
 
 .contacts {
   float: right;
@@ -56,34 +58,34 @@ $header2-height     : 96px;
 
 .header-2 {
   height: $header2-height;
-
-
-  .links {
-    display: inline-block;
-    float: right;
-    padding-top: 40px;
-
-
-      .links__item {
-        list-style: none;
-        display: inline-block;
-        margin-left: 34px;
-
-          .link {
-            color: #474747;
-            font-family: OpenSansSemiBold;
-            font-size: 16px;
-
-          }
-          .link:first-child {
-            margin-left: 0px;
-          }
-          .link:hover {
-            color: #ff6600;
-          }
-      }
-  }
 }
+
+.links {
+  display: inline-block;
+  float: right;
+  padding-top: 40px;
+}
+
+.links__item {
+    list-style: none;
+    display: inline-block;
+    margin-left: 34px;
+}
+
+.link {
+  color: #474747;
+  font-family: OpenSansSemiBold;
+  font-size: 16px;
+}
+
+.link:first-child {
+  margin-left: 0px;
+}
+
+.link:hover {
+  color: #ff6600;
+}
+
 
 .search-form {
   float: left;
@@ -130,9 +132,14 @@ $header2-height     : 96px;
   width: 238px;
   height: 36px;
 
+
   &.header-logo {
+    padding-top: 32px;
     float: left;
-    margin-top: 32px;
+  }
+
+  &.footer-logo {
+    padding-top: 72px;
   }
 
   &.logo-link {

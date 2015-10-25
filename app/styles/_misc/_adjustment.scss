@@ -1,8 +1,8 @@
 /* --------- adjustment --------- */
 
 $container-width    : 1100px;
-$footer-height      : 220px;
 $body-font          : OpenSansRegular;
+$footer-height      : 220px;
 
 html {
 	width:100%;
@@ -65,8 +65,3 @@ p {
     margin: 0;
 }
 
-footer {
-	position: relative; 
-	margin-top: -$footer-height;
-	height: $footer-height;
-}

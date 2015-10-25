@@ -13,25 +13,27 @@
 .socials {
   margin: 0px;
   padding: 0px;
-  /* TODO - sprites for social icons */
 }
-.socials.socials_header {
+.socials.socials--header {
   /*position: absolute;
   left: 0;
   top: 25px;*/
   float: left;
   min-width: 126px;
 }
-.socials .socials__item {
+
+.socials__item {
   display: inline-block;
   height: 26px;
   width: 30px;
   margin-left: 16px;
 }
-.socials .socials__item:first-child {
+
+.socials__item:first-child {
   margin-left: 0px;
 }
 
+/* TODO - sprites for social icons */
 .contacts {
   float: right;
 }
@@ -52,25 +54,30 @@
 .header-2 {
   height: 96px;
 }
-.header-2 .links {
+
+.links {
   display: inline-block;
   float: right;
   padding-top: 40px;
 }
-.header-2 .links .links__item {
+
+.links__item {
   list-style: none;
   display: inline-block;
   margin-left: 34px;
 }
-.header-2 .links .links__item .link {
+
+.link {
   color: #474747;
   font-family: OpenSansSemiBold;
   font-size: 16px;
 }
-.header-2 .links .links__item .link:first-child {
+
+.link:first-child {
   margin-left: 0px;
 }
-.header-2 .links .links__item .link:hover {
+
+.link:hover {
   color: #ff6600;
 }
 
@@ -117,8 +124,11 @@
   height: 36px;
 }
 .logo.header-logo {
+  padding-top: 32px;
   float: left;
-  margin-top: 32px;
+}
+.logo.footer-logo {
+  padding-top: 72px;
 }
 
 .top-nav {
