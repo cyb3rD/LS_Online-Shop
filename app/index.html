@@ -14,6 +14,7 @@
 	<link rel="stylesheet" href="css/main.css">
 	<!-- Fonts & favicon-->
 	<link rel="stylesheet" href="fonts/opensans/opensans.css">
+	<link rel="stylesheet" href="fonts/fontawesome/font-awesome.min.css">
 	<link rel="icon" type="image/png" href="img/favicon.png">
 	<!-- build:js js/modernizr.min.js-->
 	<script type="text/javascript" src="bower/modernizr/modernizr.js"></script>
@@ -79,60 +80,141 @@
 						<li class="breadcrumbs_item"><a href="#" class="breadcrumbs_link">Главная ></a></li>
 						<li class="breadcrumbs_item"><a href="#" class="breadcrumbs_link breadcrumbs_link--location">Каталог</a></li>
 					</ul>
-					<div class="section-name section-name--mobile">Мобильные телефоны</div>
+					<div class="section-name">Мобильные телефоны</div>
+					<div class="filter">
+						<ul class="filter_options">
+							<li class="filter_item filter_item--type">
+								<input id="flagman" type="checkbox" name="category" value="flagman" class="filter_item__category--check">
+								<label for="flagman" class="category_name filter_item_check-box__hidden">Флагманы</label>
+							</li>
+							<li class="filter_item filter_item--type">
+								<input id="cheap" type="checkbox" name="category" value="flagman" class="filter_item__category--check">
+								<label for="cheap" class="category_name filter_item_check-box__hidden">Бюджетная линейка</label>
+							</li>
+						</ul>
+					</div>
 					<div class="filter">
 						<div class="filter_group">
-							<div class="filter_header">Наличие в магазинах
-								<ul class="filter_options">
-									<li class="filter_item">Во всех магазинах</li>
-									<li class="filter_item">В ближайшем ко мне магазине</li>
-								</ul>
-							</div>
+							<div class="filter_header">Наличие в магазинах</div>
+							<ul class="filter_options">
+								<li class="filter_item">
+									<input id="AllStore" type="radio" name="check-store" value="AllStore" class="filter_item--check_radio">
+									<label for="AllStore" class="filter_item_radio">Во всех магазинах</label>
+								</li>
+								<li class="filter_item">
+									<input id="NearMe" type="radio" name="check-store" value="NearMe" class="filter_item--check_radio">
+									<label for="NearMe" class="filter_item_radio">В ближайшем ко мне магазине</label>
+								</li>
+							</ul>
 						</div>
 						<div class="filter_group">
-							<div class="filter_header">Бренды
-								<ul class="filter_options">
-									<li class="filter_item">Lenovo</li>
-									<li class="filter_item">Apple</li>
-									<li class="filter_item">Samsung</li>
-									<li class="filter_item">Asus</li>
-									<li class="filter_item">Motorolla</li>
-								</ul>
-							</div>
+							<div class="filter_header">Бренды</div>
+							<ul class="filter_options">
+								<li class="filter_item">
+									<input id="Lenovo" type="checkbox" name="check-Lenovo" value="Lenovo" class="filter_item--check">
+									<label for="Lenovo" class="filter_item_check-box">Lenovo</label>
+								</li>
+								<li class="filter_item">
+									<input id="Apple" type="checkbox" name="check-Apple" value="Apple" class="filter_item--check">
+									<label for="Apple" class="filter_item_check-box">Apple</label>
+								</li>
+								<li class="filter_item">
+									<input id="Samsung" type="checkbox" name="check-Samsung" value="Samsung" class="filter_item--check">
+									<label for="Samsung" class="filter_item_check-box">Samsung</label>
+								</li>
+								<li class="filter_item">
+									<input id="Asus" type="checkbox" name="check-Asus" value="Asus" class="filter_item--no_in_store">
+									<label for="Asus" class="filter_item_check-box">Asus</label>
+								</li>
+								<li class="filter_item">
+									<input id="Motorolla" type="checkbox" name="check-Motorolla" value="Motorolla" class="filter_item--check">
+									<label for="Motorolla" class="filter_item_check-box">Motorolla</label>
+								</li>
+								<li class="filter_item"><a href="#" class="button-clear">Очистить</a></li>
+							</ul>
 						</div>
 						<div class="filter_group">
-							<div class="filter_header">Цена
-								<ul class="filter_options"></ul>
-							</div>
+							<div class="filter_header">Цена</div>
+							<ul class="filter_options"></ul>
 						</div>
 						<div class="filter_group filter_group--colors">
-							<div class="filter_header">Цвет
-								<ul class="filter_options_color">
-									<li class="filter_options_color_item item_color--white"></li>
-									<li class="filter_options_color_item item_color--grey item_color--selected"></li>
-									<li class="filter_options_color_item item_color--black"></li>
-									<li class="filter_options_color_item item_color--blue"></li>
-									<li class="filter_options_color_item item_color--red"></li>
-									<li class="filter_options_color_item item_color--yellow"></li>
-									<li class="filter_options_color_item item_color--orange"></li>
-									<li class="filter_options_color_item item_color--green"></li>
-									<li class="filter_options_color_item item_color--cyan"></li>
-									<li class="filter_options_color_item item_color--violet"></li>
-									<li class="filter_options_color_item item_color--pink"></li>
-									<li class="filter_options_color_item item_color--brown"></li>
-								</ul>
-							</div>
+							<div class="filter_header">Цвет</div>
+							<ul class="filter_options_color">
+								<li class="filter_options_color_item">
+									<input id="white" type="checkbox" name="white" value="white" class="filter_item_color--check">
+									<label for="white" class="filter_item_color_check-box__white"></label>
+								</li>
+								<li class="filter_options_color_item">
+									<input id="grey" type="checkbox" name="grey" value="grey" class="filter_item_color--check">
+									<label for="grey" class="filter_item_color_check-box__grey"></label>
+								</li>
+								<li class="filter_options_color_item">
+									<input id="black" type="checkbox" name="black" value="black" class="filter_item_color--check">
+									<label for="black" class="filter_item_color_check-box__black"></label>
+								</li>
+								<li class="filter_options_color_item">
+									<input id="blue" type="checkbox" name="blue" value="blue" class="filter_item_color--check">
+									<label for="blue" class="filter_item_color_check-box__blue"></label>
+								</li>
+								<li class="filter_options_color_item">
+									<input id="red" type="checkbox" name="red" value="red" class="filter_item_color--check">
+									<label for="red" class="filter_item_color_check-box__red"></label>
+								</li>
+								<li class="filter_options_color_item">
+									<input id="yellow" type="checkbox" name="red" value="yellow" class="filter_item_color--check">
+									<label for="yellow" class="filter_item_color_check-box__yellow"></label>
+								</li>
+								<li class="filter_options_color_item">
+									<input id="orange" type="checkbox" name="red" value="orange" class="filter_item_color--check">
+									<label for="orange" class="filter_item_color_check-box__orange"></label>
+								</li>
+								<li class="filter_options_color_item">
+									<input id="green" type="checkbox" name="red" value="green" class="filter_item_color--check">
+									<label for="green" class="filter_item_color_check-box__green"></label>
+								</li>
+								<li class="filter_options_color_item">
+									<input id="cyan" type="checkbox" name="red" value="cyan" class="filter_item_color--check">
+									<label for="cyan" class="filter_item_color_check-box__cyan"></label>
+								</li>
+								<li class="filter_options_color_item">
+									<input id="violet" type="checkbox" name="red" value="violet" class="filter_item_color--check">
+									<label for="violet" class="filter_item_color_check-box__violet"></label>
+								</li>
+								<li class="filter_options_color_item">
+									<input id="pink" type="checkbox" name="red" value="pink" class="filter_item_color--check">
+									<label for="pink" class="filter_item_color_check-box__pink"></label>
+								</li>
+								<li class="filter_options_color_item">
+									<input id="brown" type="checkbox" name="red" value="brown" class="filter_item_color--check">
+									<label for="brown" class="filter_item_color_check-box__brown"></label>
+								</li>
+							</ul>
 						</div>
 						<div class="filter_group">
-							<div class="filter_header">Операционные системы
-								<ul class="filter_options">
-									<li class="filter_item">Android</li>
-									<li class="filter_item">iOS</li>
-									<li class="filter_item">Windows Mobile</li>
-									<li class="filter_item">Symbian</li>
-									<li class="filter_item">Custom</li>
-								</ul>
-							</div>
+							<div class="filter_header">Операционные системы</div>
+							<ul class="filter_options">
+								<li class="filter_item">
+									<input id="Android" type="checkbox" name="check-Android" value="Android" class="filter_item--check">
+									<label for="Android" class="filter_item_check-box">Android</label>
+								</li>
+								<li class="filter_item">
+									<input id="iOS" type="checkbox" name="check-iOS" value="iOS" class="filter_item--check">
+									<label for="iOS" class="filter_item_check-box">iOS</label>
+								</li>
+								<li class="filter_item">
+									<input id="Mobile" type="checkbox" name="check-Mobile" value="Mobile" class="filter_item--check">
+									<label for="Mobile" class="filter_item_check-box">Windows Mobile</label>
+								</li>
+								<li class="filter_item">
+									<input id="Symbian" type="checkbox" name="check-Symbian" value="Symbian" class="filter_item--no_in_store">
+									<label for="Symbian" class="filter_item_check-box">Symbian</label>
+								</li>
+								<li class="filter_item">
+									<input id="Custom" type="checkbox" name="check-Custom" value="Custom" class="filter_item--check">
+									<label for="Custom" class="filter_item_check-box">Custom</label>
+								</li>
+								<li class="filter_item"><a href="#" class="button-clear">Очистить</a></li>
+							</ul>
 						</div>
 					</div>
 				</aside>

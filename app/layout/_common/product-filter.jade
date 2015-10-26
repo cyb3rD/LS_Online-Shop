@@ -1,43 +1,119 @@
+.section-name Мобильные телефоны
+.filter
+   ul.filter_options
+
+      li.filter_item.filter_item--type
+         input(id="flagman",type="checkbox",name="category",value="flagman").filter_item__category--check
+         label(for="flagman").category_name.filter_item_check-box__hidden Флагманы
+      li.filter_item.filter_item--type
+         input(id="cheap",type="checkbox",name="category",value="flagman").filter_item__category--check
+         label(for="cheap").category_name.filter_item_check-box__hidden Бюджетная линейка
+
 .filter
    .filter_group
       .filter_header Наличие в магазинах
-         ul.filter_options
-            li.filter_item Во всех магазинах
-            li.filter_item В ближайшем ко мне магазине
+      ul.filter_options
+         li.filter_item
+            input(id="AllStore",type="radio",name="check-store",value="AllStore").filter_item--check_radio
+            label(for="AllStore").filter_item_radio Во всех магазинах
+         li.filter_item
+            input(id="NearMe",type="radio",name="check-store",value="NearMe").filter_item--check_radio
+            label(for="NearMe").filter_item_radio В ближайшем ко мне магазине
+
+
    .filter_group
       .filter_header Бренды
-         ul.filter_options
-            li.filter_item Lenovo
-            li.filter_item Apple
-            li.filter_item Samsung
-            li.filter_item Asus
-            li.filter_item Motorolla
+      ul.filter_options
+         li.filter_item
+            input(id="Lenovo",type="checkbox",name="check-Lenovo",value="Lenovo").filter_item--check
+            label(for="Lenovo").filter_item_check-box Lenovo
+         li.filter_item
+            input(id="Apple",type="checkbox",name="check-Apple",value="Apple").filter_item--check
+            label(for="Apple").filter_item_check-box Apple
+         li.filter_item
+            input(id="Samsung",type="checkbox",name="check-Samsung",value="Samsung").filter_item--check
+            label(for="Samsung").filter_item_check-box Samsung
+         li.filter_item
+            input(id="Asus",type="checkbox",name="check-Asus",value="Asus").filter_item--no_in_store
+            label(for="Asus").filter_item_check-box Asus
+         li.filter_item
+            input(id="Motorolla",type="checkbox",name="check-Motorolla",value="Motorolla").filter_item--check
+            label(for="Motorolla").filter_item_check-box Motorolla
+         li.filter_item
+            a(href="#").button-clear Очистить
+
    .filter_group
       .filter_header Цена
-         ul.filter_options
+      ul.filter_options
+
    .filter_group.filter_group--colors
       .filter_header Цвет
-         ul.filter_options_color
-            li.filter_options_color_item.item_color--white
-            li.filter_options_color_item.item_color--grey.item_color--selected
-            li.filter_options_color_item.item_color--black
-            li.filter_options_color_item.item_color--blue
+      ul.filter_options_color
+         li.filter_options_color_item
+            input(id="white",type="checkbox",name="white",value="white").filter_item_color--check
+            label(for="white").filter_item_color_check-box__white
 
-            li.filter_options_color_item.item_color--red
-            li.filter_options_color_item.item_color--yellow
-            li.filter_options_color_item.item_color--orange
-            li.filter_options_color_item.item_color--green
+         li.filter_options_color_item
+            input(id="grey",type="checkbox",name="grey",value="grey").filter_item_color--check
+            label(for="grey").filter_item_color_check-box__grey
 
-            li.filter_options_color_item.item_color--cyan
-            li.filter_options_color_item.item_color--violet
-            li.filter_options_color_item.item_color--pink
-            li.filter_options_color_item.item_color--brown
+         li.filter_options_color_item
+            input(id="black",type="checkbox",name="black",value="black").filter_item_color--check
+            label(for="black").filter_item_color_check-box__black
+
+         li.filter_options_color_item
+            input(id="blue",type="checkbox",name="blue",value="blue").filter_item_color--check
+            label(for="blue").filter_item_color_check-box__blue
+
+         li.filter_options_color_item
+            input(id="red",type="checkbox",name="red",value="red").filter_item_color--check
+            label(for="red").filter_item_color_check-box__red
+
+         li.filter_options_color_item
+            input(id="yellow",type="checkbox",name="red",value="yellow").filter_item_color--check
+            label(for="yellow").filter_item_color_check-box__yellow
+
+         li.filter_options_color_item
+            input(id="orange",type="checkbox",name="red",value="orange").filter_item_color--check
+            label(for="orange").filter_item_color_check-box__orange
+
+         li.filter_options_color_item
+            input(id="green",type="checkbox",name="red",value="green").filter_item_color--check
+            label(for="green").filter_item_color_check-box__green
+
+         li.filter_options_color_item
+            input(id="cyan",type="checkbox",name="red",value="cyan").filter_item_color--check
+            label(for="cyan").filter_item_color_check-box__cyan
+
+         li.filter_options_color_item
+            input(id="violet",type="checkbox",name="red",value="violet").filter_item_color--check
+            label(for="violet").filter_item_color_check-box__violet
+
+         li.filter_options_color_item
+            input(id="pink",type="checkbox",name="red",value="pink").filter_item_color--check
+            label(for="pink").filter_item_color_check-box__pink
+
+         li.filter_options_color_item
+            input(id="brown",type="checkbox",name="red",value="brown").filter_item_color--check
+            label(for="brown").filter_item_color_check-box__brown
 
    .filter_group
       .filter_header Операционные системы
-         ul.filter_options
-            li.filter_item Android
-            li.filter_item iOS
-            li.filter_item Windows Mobile
-            li.filter_item Symbian
-            li.filter_item Custom
+      ul.filter_options
+         li.filter_item
+            input(id="Android",type="checkbox",name="check-Android",value="Android").filter_item--check
+            label(for="Android").filter_item_check-box Android
+         li.filter_item
+            input(id="iOS",type="checkbox",name="check-iOS",value="iOS").filter_item--check
+            label(for="iOS").filter_item_check-box iOS
+         li.filter_item
+            input(id="Mobile",type="checkbox",name="check-Mobile",value="Mobile").filter_item--check
+            label(for="Mobile").filter_item_check-box Windows Mobile
+         li.filter_item
+            input(id="Symbian",type="checkbox",name="check-Symbian",value="Symbian").filter_item--no_in_store
+            label(for="Symbian").filter_item_check-box Symbian
+         li.filter_item
+            input(id="Custom",type="checkbox",name="check-Custom",value="Custom").filter_item--check
+            label(for="Custom").filter_item_check-box Custom
+         li.filter_item
+            a(href="#").button-clear Очистить
