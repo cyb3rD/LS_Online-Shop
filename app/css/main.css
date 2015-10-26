@@ -1155,6 +1155,65 @@ input[type=checkbox].filter_item_color--check:checked + label:before {
   background-color: #7f401d;
 }
 
+.list-view-header {
+  height: 53px;
+  border-radius: 6px;
+  border-left: 1px solid #dee1e4;
+  background-color: #e4ebee;
+  margin-bottom: 20px;
+  line-height: 53px;
+  font-family: OpenSansRegular;
+  font-size: 14px;
+  color: #5d656c;
+}
+
+.list-view-header-caption {
+  padding-left: 20px;
+}
+
+.list-view-select {
+  width: 144px;
+  height: 28px;
+  border-radius: 4px;
+  margin-left: 10px;
+  -webkit-appearance: none;
+  background-image: url("../img/select.png");
+  background-position: 95% center;
+  background-repeat: no-repeat;
+  line-height: 1em;
+  /* for FF */
+  -moz-appearance: none;
+  text-indent: 0.01px;
+  text-overflow: '';
+  /* for IE */
+  -ms-appearance: none;
+  appearance: none !important;
+  font-family: OpenSansLight;
+  font-size: 14px;
+  padding-left: 14px;
+}
+
+.list-view-header-choose-type {
+  padding-left: 196px;
+}
+
+.list-view__choose {
+  display: inline-block;
+}
+
+.list-view__choose_list {
+  display: inline-block;
+  border-left: 1px solid #dee1e4;
+  padding-left: 17px;
+  padding-right: 17px;
+  padding-top: 8px;
+}
+
+.list-view__img {
+  display: inline-block;
+  padding-top: 8px;
+}
+
 .important-col-1 {
   float: left;
   width: 535px;
@@ -1240,7 +1299,7 @@ input[type=checkbox].filter_item_color--check:checked + label:before {
 .list-content {
   float: right;
   width: 743px;
-  padding-top: 89px;
+  padding-top: 100px;
 }
 
 .section-name {

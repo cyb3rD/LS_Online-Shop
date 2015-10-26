@@ -220,7 +220,19 @@
 				</aside>
 				<!-- Sidebar with filter-->
 				<aside class="list-content">
-					<aside class="right-filter">Сортировать по Вид каталога</aside>Content of the page with mobile phones mobiles.jade
+					<!-- aside.right-filter Сортировать по Вид каталога-->
+					<div class="list-view-header"><span class="list-view-header-caption">Сортировать по
+							<select id="sort" name="sort" class="list-view-select">
+								<option selected value="по цене">по цене</option>
+								<option value="по популярности">по популярности</option>
+							</select></span><span class="list-view-header-choose-type">Вид каталога
+							<ul class="list-view__choose">
+								<li class="list-view__choose_list"><a href="#" class="list-view__img"><img src="/img/view-list-2.png" alt="preview"></a></li>
+								<li class="list-view__choose_list"><a href="#" class="list-view__img"><img src="/img/view-thumbnail.png" alt="thumbnail"></a></li>
+								<li class="list-view__choose_list"><a href="#" class="list-view__img"><img src="/img/view-list.png" alt="list"></a></li>
+							</ul></span></div>
+					<!--Created by nikolay on 26.10.2015.
+					-->Content of the page with mobile phones mobiles.jade
 				</aside>
 			</div>
 			<div class="container">
