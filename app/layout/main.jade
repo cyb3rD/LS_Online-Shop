@@ -1,24 +1,25 @@
 doctype html
 html(lang="Ru-ru")
     head
-    meta(charset="UTF-8")
-    meta(http-equiv="X-UA-Compatible" content="IE=edge")
-    meta(meta name="viewport" content="width=device-width, initial-scale=1")
-    meta(name="description" content="Cooltech интернет магазин")
-    meta(name="keywords" content="планшеты, ноутбуки, смартфоны")
-    meta(name="author" content="Nikolay Ignatyev")
-    title
-    // Bower CSS
-    link(rel="stylesheet" href="bower/normalize-css/normalize.css")
-    // Dev CSS
-    link(rel="stylesheet" href="css/main.css")
-    // Fonts & favicon
-    link(rel="stylesheet" href="fonts/opensans/opensans.css")
-    link(rel="stylesheet" href="fonts/fontawesome/font-awesome.min.css")
-    link(rel="icon" type="image/png" href="img/favicon.png")
-    // build:js js/modernizr.min.js
-    script(type="text/javascript" src="bower/modernizr/modernizr.js")
-    // endbuild
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(meta name="viewport" content="width=device-width, initial-scale=1")
+        meta(name="description" content="Cooltech интернет магазин")
+        meta(name="keywords" content="планшеты, ноутбуки, смартфоны")
+        meta(name="author" content="Nikolay Ignatyev")
+        title CooltTech Online Shop
+        // Bower CSS
+        link(rel="stylesheet" href="bower/normalize-css/normalize.css")
+        // Dev CSS
+        link(rel="stylesheet" href="css/main.css")
+        // Fonts & favicon
+        link(rel="stylesheet" href="fonts/opensans/opensans.css")
+        link(rel="stylesheet" href="fonts/fontawesome/font-awesome.min.css")
+        link(rel="stylesheet" href="fonts/ptsans/PTS75F_stylesheet.css")
+        link(rel="icon" type="image/png" href="img/favicon.png")
+        // build:js js/modernizr.min.js
+        script(type="text/javascript" src="bower/modernizr/modernizr.js")
+        // endbuild
     body
         <!--[if lt IE 7]>
         <p class="browsehappy">Вы используете <strong>устаревший</strong>браузер.Пожалуйста,
@@ -34,14 +35,9 @@ html(lang="Ru-ru")
                     include _common/product-filter
                 // Sidebar with filter
                 aside.list-content
-<<<<<<< HEAD
-                    // aside.right-filter Сортировать по Вид каталога
                     include _common/list-view
-                    | Content of the page with mobile phones mobiles.jade
-=======
-                    aside.right-filter Сортировать по Вид каталога
                     include _common/mobiles
->>>>>>> fd8c52989582142cc818e518757491e4299adb9e
+
             .container
                 include _common/important-info
         include _common/footer

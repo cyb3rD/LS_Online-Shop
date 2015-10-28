@@ -3,16 +3,16 @@
   border-radius: 6px;
   border-left: 1px solid #dee1e4;
   background-color: #e4ebee;
-  margin-bottom: 20px;
   line-height: 53px;
 
   font-family: OpenSansRegular;
   font-size: 14px;
   color: #5d656c;
+
 }
 
 .list-view-header-caption {
-
+  float: left;
   padding-left: 20px;
 }
 
@@ -42,7 +42,7 @@
 }
 
 .list-view-header-choose-type {
-  padding-left: 196px;
+  float: right;
 }
 
 .list-view__choose {
@@ -50,13 +50,21 @@
 }
 
 .list-view__choose_list {
+  &:first-child {
+    border-left: none;
+  }
+  
   display: inline-block;
   border-left: 1px solid #dee1e4;
-  padding-left: 17px;
-  padding-right: 17px;
-  padding-top: 8px;
+
 }
+
 .list-view__img {
   display: inline-block;
-  padding-top: 8px;
+  padding-left: 17px;
+  padding-right: 17px;
+}
+
+.img--align-center {
+  vertical-align: middle;
 }

@@ -5,7 +5,7 @@
   -moz-border-radius: 6px;
   border-radius: 6px;
   overflow: hidden;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .button-clear {
@@ -14,7 +14,7 @@
 
 .filter_group {
   padding-left: 30px;
-  padding-top: 17px;
+  padding-top: 10px;
   border-bottom: 1px solid #dee1e4;
   /*padding-bottom: 22px;*/
 }
@@ -26,7 +26,7 @@
 .filter_header {
   font-family: OpenSansSemiBold;
   font-size: 17px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .filter_options {
@@ -67,9 +67,9 @@
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   width: 100%;
-  padding-top: 17px;
+  padding-top: 13px;
   padding-left: 30px;
-  padding-bottom: 17px;
+  padding-bottom: 12px;
 }
 
 input[type=checkbox].filter_item__category--check:checked + label {

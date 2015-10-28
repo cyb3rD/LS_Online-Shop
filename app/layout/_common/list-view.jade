@@ -1,19 +1,21 @@
 .list-view-header
-   span.list-view-header-caption Сортировать по
+   div.list-view-header-caption Сортировать по
       select(id="sort",name="sort").list-view-select
          option(selected, value="по цене") по цене
          option(value="по популярности") по популярности
-   span.list-view-header-choose-type Вид каталога
+   div.list-view-header-choose-type
       ul.list-view__choose
          li.list-view__choose_list
-            a(href="#").list-view__img
-               img(src="/img/view-list-2.png" alt="preview")
+            |Вид каталога
          li.list-view__choose_list
             a(href="#").list-view__img
-               img(src="/img/view-thumbnail.png" alt="thumbnail")
+               img(src="/img/view-list-2.png" alt="preview").img--align-center
          li.list-view__choose_list
             a(href="#").list-view__img
-               img(src="/img/view-list.png" alt="list")
+               img(src="/img/view-thumbnail.png" alt="thumbnail").img--align-center
+         li.list-view__choose_list
+            a(href="#").list-view__img
+               img(src="/img/view-list.png" alt="list").img--align-center
 
 
 //
