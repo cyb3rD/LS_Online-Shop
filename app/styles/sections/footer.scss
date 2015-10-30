@@ -5,7 +5,7 @@ $footer-height      : 220px;
   margin-top: -$footer-height;
   height: $footer-height;
   color: white;
-  background-image: url("../img/background--footer.png");
+  //background: url("../img/background--footer.png") repeat-x;
 }
 
 .footer-left {
@@ -26,12 +26,24 @@ $footer-height      : 220px;
 
 .socials__item--footer {
   height: 42px;
+  background-color: #ffffff;
   width: 42px;
 }
+//===================================
+$socials: vk, tw, fb;
 
-.link--footer {
-  color: white;
+@each $social in $socials {
+  .link-#{$social}--footer {
+    background: url('/img/icons/#{$social}--footer.png') 50% 50% no-repeat;
+    display: block;
+    color: white;
+    width: 42px;
+    height: 42px;
+  }
 }
+
+//===================================
+
 
 .links_footer {
   display: inline-block;

@@ -7,7 +7,8 @@ html(lang="Ru-ru")
         meta(name="description" content="Cooltech интернет магазин")
         meta(name="keywords" content="планшеты, ноутбуки, смартфоны")
         meta(name="author" content="Nikolay Ignatyev")
-        title CooltTech Online Shop
+        title
+            block pageTitle
         // Bower CSS
         link(rel="stylesheet" href="bower/normalize-css/normalize.css")
         // Dev CSS
@@ -40,6 +41,7 @@ html(lang="Ru-ru")
 
             .container
                 include _common/important-info
+
         include _common/footer
 
         script(type="text/javascript" src="bower/jquery/jquery.min.js")

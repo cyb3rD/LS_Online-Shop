@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="Ru-ru">
-	<head></head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Cooltech интернет магазин">
-	<meta name="keywords" content="планшеты, ноутбуки, смартфоны">
-	<meta name="author" content="Nikolay Ignatyev">
-	<title></title>
-	<!-- Bower CSS-->
-	<link rel="stylesheet" href="bower/normalize-css/normalize.css">
-	<!-- Dev CSS-->
-	<link rel="stylesheet" href="css/main.css">
-	<!-- Fonts & favicon-->
-	<link rel="stylesheet" href="fonts/opensans/opensans.css">
-	<link rel="stylesheet" href="fonts/fontawesome/font-awesome.min.css">
-	<link rel="icon" type="image/png" href="img/favicon.png">
-	<!-- build:js js/modernizr.min.js-->
-	<script type="text/javascript" src="bower/modernizr/modernizr.js"></script>
-	<!-- endbuild-->
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Cooltech интернет магазин">
+		<meta name="keywords" content="планшеты, ноутбуки, смартфоны">
+		<meta name="author" content="Nikolay Ignatyev">
+		<title>CoolTech Online Store</title>
+		<!-- Bower CSS-->
+		<link rel="stylesheet" href="bower/normalize-css/normalize.css">
+		<!-- Dev CSS-->
+		<link rel="stylesheet" href="css/main.css">
+		<!-- Fonts & favicon-->
+		<link rel="stylesheet" href="fonts/opensans/opensans.css">
+		<link rel="stylesheet" href="fonts/fontawesome/font-awesome.min.css">
+		<link rel="stylesheet" href="fonts/ptsans/PTS75F_stylesheet.css">
+		<link rel="icon" type="image/png" href="img/favicon.png">
+		<!-- build:js js/modernizr.min.js-->
+		<script type="text/javascript" src="bower/modernizr/modernizr.js"></script>
+		<!-- endbuild-->
+	</head>
 	<body>
 		<!--[if lt IE 7]>
 		<p class="browsehappy">Вы используете <strong>устаревший</strong>браузер.Пожалуйста,
@@ -30,19 +32,19 @@
 					<div class="container">
 						<!-- Social icons-->
 						<ul class="socials socials--header">
-							<li class="socials__item"><a href="#" class="link-fb">fb</a></li>
-							<li class="socials__item"><a href="#" class="link-vk">vk</a></li>
-							<li class="socials__item"><a href="#" class="link-tw">tw</a></li>
+							<li class="socials__item"><a href="" class="social__item link-vk">vk</a></li>
+							<li class="socials__item"><a href="" class="social__item link-fb">fb</a></li>
+							<li class="socials__item"><a href="" class="social__item link-tw">tw</a></li>
 						</ul>
 						<!-- Contacts-->
 						<ul class="contacts">
-							<li class="contacts__address">ул. Маяковская 6, офис 17</li>
-							<li class="contacts__phone">+7 (921) 123-12-13</li>
+							<li class="map_icon contacts__address">ул. Маяковская 6, офис 17</li>
+							<li class="phone_icon contacts__phone"><a href="tel:+79211231313" class="phone_link">+7 (921) 123-12-13</a></li>
 						</ul>
 						<!-- Logo image-->
 					</div>
 				</div>
-				<div class="header-2">
+				<div class="top-search">
 					<div class="container">
 						<div class="logo header-logo"><a href="/" class="logo-link"><img src="/img/cooltech-header-logo.png" alt="cooltech logo" class="logo-pic"><span class="logo-text"></span></a></div>
 						<!-- Search area-->
@@ -64,7 +66,7 @@
 							<ul class="nav_list">
 								<li class="nav_item"><a href="#" class="nav_link">Планшеты</a></li>
 								<li class="nav_item nav_item--current"><a href="#" class="nav_link">Мобильные телефоны</a></li>
-								<li class="nav_item"><a href="#" class="nav_link">Mp3-плееры</a></li>
+								<li class="nav_item"><a href="#" class="nav_link">Mp3 плееры</a></li>
 								<li class="nav_item"><a href="#" class="nav_link">Персональные компьютеры</a></li>
 								<li class="nav_item"><a href="#" class="nav_link">Ноутбуки</a></li>
 								<li class="nav_item"><a href="#" class="nav_link">Аксессуары</a></li>
@@ -95,7 +97,7 @@
 					</div>
 					<div class="filter">
 						<div class="filter_group">
-							<div class="filter_header">Наличие в магазинах</div>
+							<div class="filter_header filter--accordeon">Наличие в магазинах</div>
 							<ul class="filter_options">
 								<li class="filter_item">
 									<input id="AllStore" type="radio" name="check-store" value="AllStore" class="filter_item--check_radio">
@@ -130,7 +132,7 @@
 									<input id="Motorolla" type="checkbox" name="check-Motorolla" value="Motorolla" class="filter_item--check">
 									<label for="Motorolla" class="filter_item_check-box">Motorolla</label>
 								</li>
-								<li class="filter_item"><a href="#" class="button-clear">Очистить</a></li>
+								<li class="filter_item"><a href="#" class="button-clear">Сбросить фильтр</a></li>
 							</ul>
 						</div>
 						<div class="filter_group">
@@ -213,89 +215,551 @@
 									<input id="Custom" type="checkbox" name="check-Custom" value="Custom" class="filter_item--check">
 									<label for="Custom" class="filter_item_check-box">Custom</label>
 								</li>
-								<li class="filter_item"><a href="#" class="button-clear">Очистить</a></li>
+								<li class="filter_item"><a href="#" class="button-clear">Сбросить фильтр</a></li>
 							</ul>
 						</div>
 					</div>
 				</aside>
 				<!-- Sidebar with filter-->
 				<aside class="list-content">
-<<<<<<< HEAD
-					<!-- aside.right-filter Сортировать по Вид каталога-->
-					<div class="list-view-header"><span class="list-view-header-caption">Сортировать по
+					<div class="list-view-header">
+						<div class="list-view-header-caption">Сортировать по
 							<select id="sort" name="sort" class="list-view-select">
 								<option selected value="по цене">по цене</option>
 								<option value="по популярности">по популярности</option>
-							</select></span><span class="list-view-header-choose-type">Вид каталога
+							</select>
+						</div>
+						<div class="list-view-header-choose-type">
 							<ul class="list-view__choose">
-								<li class="list-view__choose_list"><a href="#" class="list-view__img"><img src="/img/view-list-2.png" alt="preview"></a></li>
-								<li class="list-view__choose_list"><a href="#" class="list-view__img"><img src="/img/view-thumbnail.png" alt="thumbnail"></a></li>
-								<li class="list-view__choose_list"><a href="#" class="list-view__img"><img src="/img/view-list.png" alt="list"></a></li>
-							</ul></span></div>
+								<li class="list-view__choose_list">Вид каталога</li>
+								<li class="list-view__choose_list"><a href="#" class="list-view__img"><img src="/img/view-list-2.png" alt="preview" class="img--align-center"></a></li>
+								<li class="list-view__choose_list"><a href="#" class="list-view__img"><img src="/img/view-thumbnail.png" alt="thumbnail" class="img--align-center"></a></li>
+								<li class="list-view__choose_list"><a href="#" class="list-view__img"><img src="/img/view-list.png" alt="list" class="img--align-center"></a></li>
+							</ul>
+						</div>
+					</div>
 					<!--Created by nikolay on 26.10.2015.
-					-->Content of the page with mobile phones mobiles.jade
-=======
-					<aside class="right-filter">Сортировать по Вид каталога</aside>
-					<ul class="catalog">
-						<li class="catalog_item">
-							<div class="catalog_item__image">Image
-								<ul class="image-network-icons">
-									<li class="image-network-icons__preview-1">Preview-1</li>
-									<li class="image-network-icon__preview-2">Preview-2</li>
-									<li class="image-network-icon__preview-3">Preview-2</li>
+					-->
+					<!---->
+					<div class="container_items items--hide">
+						<ul class="catalog">
+												<li class="catalog_item catalog_item--default-view">
+													<div class="catalog_item_image"><img src="/img/01.png" alt="model01"></div>
+													<ul class="catalog_item_icons">
+														<li class="catalog_item_icons__preview"><img src="/img/01-01.png" alt="01"></li>
+														<li class="catalog_item_icons__preview"><img src="/img/01-02.png" alt="02"></li>
+														<li class="catalog_item_icons__preview"><img src="/img/01-03.png" alt="03"></li>
+													</ul>
+													<ul class="catalog_item_info">
+														<li class="catalog_item__model_name">Samsung GT-I9301I GALAXY S 3</li>
+														<li class="catalog_item__data_type">Тип SIM-Карты
+															<div class="catalog_item__data_val">Micro-SIM</div>
+														</li>
+														<li class="catalog_item__data_type">Количество SIM-карт
+															<div class="catalog_item__data_val">1</div>
+														</li>
+														<li class="catalog_item__data_type">Цвет
+															<div class="catalog_item__data_val">Белый</div>
+														</li>
+														<li class="catalog_item__data_type">ОС
+															<div class="catalog_item__data_val">Android</div>
+														</li>
+														<li class="catalog_item__data_type">Связь
+															<div class="catalog_item__data_val">Есть</div>
+														</li>
+														<li class="catalog_item__data_type">4G(LTE)
+															<div class="catalog_item__data_val">Нет</div>
+														</li>
+														<li class="catalog_item__data_type">GPS-модуль
+															<div class="catalog_item__data_val">Есть</div>
+														</li>
+													</ul>
+													<div class="catalog-rating"><img src="/img/star-red.png" alt="1star" class="catalog-rating__star"><img src="/img/star-red.png" alt="1star" class="catalog-rating__star"><img src="/img/star-red.png" alt="1star" class="catalog-rating__star"><img src="/img/star-red.png" alt="1star" class="catalog-rating__star"><img src="/img/star-white.png" alt="no star" class="catalog-rating__star"><span class="catalog-num-rating">4</span>
+													</div>
+													<div class="catalog-price">11 290 ₽</div>
+													<div class="catalog-store__text"><img src="/img/in-store.png" width="9" height="9" alt="В наличии" class="catalog-store__image">В наличии</div>
+													<button class="add-to-basket">В корзину</button>
+												</li>
+												<li class="catalog_item catalog_item--default-view">
+													<div class="catalog_item_image"><img src="/img/02.png" alt="model01"></div>
+													<ul class="catalog_item_icons">
+														<li class="catalog_item_icons__preview"><img src="/img/02-01.png" alt="01"></li>
+														<li class="catalog_item_icons__preview"><img src="/img/02-02.png" alt="02"></li>
+														<li class="catalog_item_icons__preview"><img src="/img/02-03.png" alt="03"></li>
+													</ul>
+													<ul class="catalog_item_info">
+														<li class="catalog_item__model_name">Microsoft Lumia 640 RM-1077</li>
+														<li class="catalog_item__data_type">Тип SIM-Карты
+															<div class="catalog_item__data_val">Micro-SIM</div>
+														</li>
+														<li class="catalog_item__data_type">Количество SIM-карт
+															<div class="catalog_item__data_val">2</div>
+														</li>
+														<li class="catalog_item__data_type">Цвет
+															<div class="catalog_item__data_val">Белый</div>
+														</li>
+														<li class="catalog_item__data_type">ОС
+															<div class="catalog_item__data_val">Windows Phone</div>
+														</li>
+														<li class="catalog_item__data_type">Связь
+															<div class="catalog_item__data_val">Есть</div>
+														</li>
+														<li class="catalog_item__data_type">4G(LTE)
+															<div class="catalog_item__data_val">Нет</div>
+														</li>
+														<li class="catalog_item__data_type">GPS-модуль
+															<div class="catalog_item__data_val">A-GPS</div>
+														</li>
+													</ul>
+													<div class="catalog-rating"><img src="/img/star-red.png" alt="1star" class="catalog-rating__star"><img src="/img/star-red.png" alt="1star" class="catalog-rating__star"><img src="/img/star-red.png" alt="1star" class="catalog-rating__star"><img src="/img/star-red.png" alt="1star" class="catalog-rating__star"><img src="/img/star-white.png" alt="no star" class="catalog-rating__star"><span class="catalog-num-rating">4</span>
+													</div>
+													<div class="catalog-price">10 990 ₽</div>
+													<div class="catalog-store__text"><img src="/img/in-store.png" width="9" height="9" alt="В наличии" class="catalog-store__image">В наличии</div>
+													<button class="add-to-basket">В корзину</button>
+												</li>
+												<li class="catalog_item catalog_item--default-view">
+													<div class="catalog_item_image"><img src="/img/03.png" alt="model01"></div>
+													<ul class="catalog_item_icons">
+														<li class="catalog_item_icons__preview"><img src="/img/03-01.png" alt="01"></li>
+														<li class="catalog_item_icons__preview"><img src="/img/03-02.png" alt="02"></li>
+														<li class="catalog_item_icons__preview"><img src="/img/03-03.png" alt="03"></li>
+													</ul>
+													<ul class="catalog_item_info">
+														<li class="catalog_item__model_name">Archos 50 Oxygen Plus</li>
+														<li class="catalog_item__data_type">Тип SIM-Карты
+															<div class="catalog_item__data_val">Micro-SIM</div>
+														</li>
+														<li class="catalog_item__data_type">Количество SIM-карт
+															<div class="catalog_item__data_val">2</div>
+														</li>
+														<li class="catalog_item__data_type">Цвет
+															<div class="catalog_item__data_val">Серый</div>
+														</li>
+														<li class="catalog_item__data_type">ОС
+															<div class="catalog_item__data_val">Android</div>
+														</li>
+														<li class="catalog_item__data_type">Связь
+															<div class="catalog_item__data_val">Есть</div>
+														</li>
+														<li class="catalog_item__data_type">4G(LTE)
+															<div class="catalog_item__data_val">Нет</div>
+														</li>
+														<li class="catalog_item__data_type">GPS-модуль
+															<div class="catalog_item__data_val">Есть</div>
+														</li>
+													</ul>
+													<div class="catalog-rating"><img src="/img/star-red.png" alt="1star" class="catalog-rating__star"><img src="/img/star-red.png" alt="1star" class="catalog-rating__star"><img src="/img/star-red.png" alt="1star" class="catalog-rating__star"><img src="/img/star-red.png" alt="1star" class="catalog-rating__star"><img src="/img/star-white.png" alt="no star" class="catalog-rating__star"><span class="catalog-num-rating">4</span>
+													</div>
+													<div class="catalog-price">9 990 ₽</div>
+													<div class="catalog-store__text"><img src="/img/in-store.png" width="9" height="9" alt="В наличии" class="catalog-store__image">В наличии</div>
+													<button class="add-to-basket">В корзину</button>
+												</li>
+												<li class="catalog_item catalog_item--default-view">
+													<div class="catalog_item_image"><img src="/img/02.png" alt="model01"></div>
+													<ul class="catalog_item_icons">
+														<li class="catalog_item_icons__preview"><img src="/img/02-01.png" alt="01"></li>
+														<li class="catalog_item_icons__preview"><img src="/img/02-02.png" alt="02"></li>
+														<li class="catalog_item_icons__preview"><img src="/img/02-03.png" alt="03"></li>
+													</ul>
+													<ul class="catalog_item_info">
+														<li class="catalog_item__model_name">Microsoft Lumia 640 RM-1077</li>
+														<li class="catalog_item__data_type">Тип SIM-Карты
+															<div class="catalog_item__data_val">Micro-SIM</div>
+														</li>
+														<li class="catalog_item__data_type">Количество SIM-карт
+															<div class="catalog_item__data_val">2</div>
+														</li>
+														<li class="catalog_item__data_type">Цвет
+															<div class="catalog_item__data_val">Белый</div>
+														</li>
+														<li class="catalog_item__data_type">ОС
+															<div class="catalog_item__data_val">Windows Phone</div>
+														</li>
+														<li class="catalog_item__data_type">Связь
+															<div class="catalog_item__data_val">Есть</div>
+														</li>
+														<li class="catalog_item__data_type">4G(LTE)
+															<div class="catalog_item__data_val">Нет</div>
+														</li>
+														<li class="catalog_item__data_type">GPS-модуль
+															<div class="catalog_item__data_val">A-GPS</div>
+														</li>
+													</ul>
+													<div class="catalog-rating"><img src="/img/star-red.png" alt="1star" class="catalog-rating__star"><img src="/img/star-red.png" alt="1star" class="catalog-rating__star"><img src="/img/star-red.png" alt="1star" class="catalog-rating__star"><img src="/img/star-red.png" alt="1star" class="catalog-rating__star"><img src="/img/star-white.png" alt="no star" class="catalog-rating__star"><span class="catalog-num-rating">4</span>
+													</div>
+													<div class="catalog-price">10 990 ₽</div>
+													<div class="catalog-store__text"><img src="/img/in-store.png" width="9" height="9" alt="В наличии" class="catalog-store__image">В наличии</div>
+													<button class="add-to-basket">В корзину</button>
+												</li>
+												<li class="catalog_item catalog_item--default-view">
+													<div class="catalog_item_image"><img src="/img/01.png" alt="model01"></div>
+													<ul class="catalog_item_icons">
+														<li class="catalog_item_icons__preview"><img src="/img/01-01.png" alt="01"></li>
+														<li class="catalog_item_icons__preview"><img src="/img/01-02.png" alt="02"></li>
+														<li class="catalog_item_icons__preview"><img src="/img/01-03.png" alt="03"></li>
+													</ul>
+													<ul class="catalog_item_info">
+														<li class="catalog_item__model_name">Samsung GT-I9301I GALAXY S 3</li>
+														<li class="catalog_item__data_type">Тип SIM-Карты
+															<div class="catalog_item__data_val">Micro-SIM</div>
+														</li>
+														<li class="catalog_item__data_type">Количество SIM-карт
+															<div class="catalog_item__data_val">1</div>
+														</li>
+														<li class="catalog_item__data_type">Цвет
+															<div class="catalog_item__data_val">Белый</div>
+														</li>
+														<li class="catalog_item__data_type">ОС
+															<div class="catalog_item__data_val">Android</div>
+														</li>
+														<li class="catalog_item__data_type">Связь
+															<div class="catalog_item__data_val">Есть</div>
+														</li>
+														<li class="catalog_item__data_type">4G(LTE)
+															<div class="catalog_item__data_val">Нет</div>
+														</li>
+														<li class="catalog_item__data_type">GPS-модуль
+															<div class="catalog_item__data_val">Есть</div>
+														</li>
+													</ul>
+													<div class="catalog-rating"><img src="/img/star-red.png" alt="1star" class="catalog-rating__star"><img src="/img/star-red.png" alt="1star" class="catalog-rating__star"><img src="/img/star-red.png" alt="1star" class="catalog-rating__star"><img src="/img/star-red.png" alt="1star" class="catalog-rating__star"><img src="/img/star-white.png" alt="no star" class="catalog-rating__star"><span class="catalog-num-rating">4</span>
+													</div>
+													<div class="catalog-price">11 290 ₽</div>
+													<div class="catalog-store__text"><img src="/img/in-store.png" width="9" height="9" alt="В наличии" class="catalog-store__image">В наличии</div>
+													<button class="add-to-basket">В корзину</button>
+												</li>
+												<li class="catalog_item catalog_item--default-view">
+													<div class="catalog_item_image"><img src="/img/03.png" alt="model01"></div>
+													<ul class="catalog_item_icons">
+														<li class="catalog_item_icons__preview"><img src="/img/03-01.png" alt="01"></li>
+														<li class="catalog_item_icons__preview"><img src="/img/03-02.png" alt="02"></li>
+														<li class="catalog_item_icons__preview"><img src="/img/03-03.png" alt="03"></li>
+													</ul>
+													<ul class="catalog_item_info">
+														<li class="catalog_item__model_name">Archos 50 Oxygen Plus</li>
+														<li class="catalog_item__data_type">Тип SIM-Карты
+															<div class="catalog_item__data_val">Micro-SIM</div>
+														</li>
+														<li class="catalog_item__data_type">Количество SIM-карт
+															<div class="catalog_item__data_val">2</div>
+														</li>
+														<li class="catalog_item__data_type">Цвет
+															<div class="catalog_item__data_val">Серый</div>
+														</li>
+														<li class="catalog_item__data_type">ОС
+															<div class="catalog_item__data_val">Android</div>
+														</li>
+														<li class="catalog_item__data_type">Связь
+															<div class="catalog_item__data_val">Есть</div>
+														</li>
+														<li class="catalog_item__data_type">4G(LTE)
+															<div class="catalog_item__data_val">Нет</div>
+														</li>
+														<li class="catalog_item__data_type">GPS-модуль
+															<div class="catalog_item__data_val">Есть</div>
+														</li>
+													</ul>
+													<div class="catalog-rating"><img src="/img/star-red.png" alt="1star" class="catalog-rating__star"><img src="/img/star-red.png" alt="1star" class="catalog-rating__star"><img src="/img/star-red.png" alt="1star" class="catalog-rating__star"><img src="/img/star-red.png" alt="1star" class="catalog-rating__star"><img src="/img/star-white.png" alt="no star" class="catalog-rating__star"><span class="catalog-num-rating">4</span>
+													</div>
+													<div class="catalog-price">9 990 ₽</div>
+													<div class="catalog-store__text"><img src="/img/in-store.png" width="9" height="9" alt="В наличии" class="catalog-store__image">В наличии</div>
+													<button class="add-to-basket">В корзину</button>
+												</li>
+												<li class="catalog_item catalog_item--default-view">
+													<div class="catalog_item_image"><img src="/img/01.png" alt="model01"></div>
+													<ul class="catalog_item_icons">
+														<li class="catalog_item_icons__preview"><img src="/img/01-01.png" alt="01"></li>
+														<li class="catalog_item_icons__preview"><img src="/img/01-02.png" alt="02"></li>
+														<li class="catalog_item_icons__preview"><img src="/img/01-03.png" alt="03"></li>
+													</ul>
+													<ul class="catalog_item_info">
+														<li class="catalog_item__model_name">Samsung GT-I9301I GALAXY S 3</li>
+														<li class="catalog_item__data_type">Тип SIM-Карты
+															<div class="catalog_item__data_val">Micro-SIM</div>
+														</li>
+														<li class="catalog_item__data_type">Количество SIM-карт
+															<div class="catalog_item__data_val">1</div>
+														</li>
+														<li class="catalog_item__data_type">Цвет
+															<div class="catalog_item__data_val">Белый</div>
+														</li>
+														<li class="catalog_item__data_type">ОС
+															<div class="catalog_item__data_val">Android</div>
+														</li>
+														<li class="catalog_item__data_type">Связь
+															<div class="catalog_item__data_val">Есть</div>
+														</li>
+														<li class="catalog_item__data_type">4G(LTE)
+															<div class="catalog_item__data_val">Нет</div>
+														</li>
+														<li class="catalog_item__data_type">GPS-модуль
+															<div class="catalog_item__data_val">Есть</div>
+														</li>
+													</ul>
+													<div class="catalog-rating"><img src="/img/star-red.png" alt="1star" class="catalog-rating__star"><img src="/img/star-red.png" alt="1star" class="catalog-rating__star"><img src="/img/star-red.png" alt="1star" class="catalog-rating__star"><img src="/img/star-red.png" alt="1star" class="catalog-rating__star"><img src="/img/star-white.png" alt="no star" class="catalog-rating__star"><span class="catalog-num-rating">4</span>
+													</div>
+													<div class="catalog-price">11 290 ₽</div>
+													<div class="catalog-store__text"><img src="/img/in-store.png" width="9" height="9" alt="В наличии" class="catalog-store__image">В наличии</div>
+													<button class="add-to-basket">В корзину</button>
+												</li>
+												<li class="catalog_item catalog_item--default-view">
+													<div class="catalog_item_image"><img src="/img/02.png" alt="model01"></div>
+													<ul class="catalog_item_icons">
+														<li class="catalog_item_icons__preview"><img src="/img/02-01.png" alt="01"></li>
+														<li class="catalog_item_icons__preview"><img src="/img/02-02.png" alt="02"></li>
+														<li class="catalog_item_icons__preview"><img src="/img/02-03.png" alt="03"></li>
+													</ul>
+													<ul class="catalog_item_info">
+														<li class="catalog_item__model_name">Microsoft Lumia 640 RM-1077</li>
+														<li class="catalog_item__data_type">Тип SIM-Карты
+															<div class="catalog_item__data_val">Micro-SIM</div>
+														</li>
+														<li class="catalog_item__data_type">Количество SIM-карт
+															<div class="catalog_item__data_val">2</div>
+														</li>
+														<li class="catalog_item__data_type">Цвет
+															<div class="catalog_item__data_val">Белый</div>
+														</li>
+														<li class="catalog_item__data_type">ОС
+															<div class="catalog_item__data_val">Windows Phone</div>
+														</li>
+														<li class="catalog_item__data_type">Связь
+															<div class="catalog_item__data_val">Есть</div>
+														</li>
+														<li class="catalog_item__data_type">4G(LTE)
+															<div class="catalog_item__data_val">Нет</div>
+														</li>
+														<li class="catalog_item__data_type">GPS-модуль
+															<div class="catalog_item__data_val">A-GPS</div>
+														</li>
+													</ul>
+													<div class="catalog-rating"><img src="/img/star-red.png" alt="1star" class="catalog-rating__star"><img src="/img/star-red.png" alt="1star" class="catalog-rating__star"><img src="/img/star-red.png" alt="1star" class="catalog-rating__star"><img src="/img/star-red.png" alt="1star" class="catalog-rating__star"><img src="/img/star-white.png" alt="no star" class="catalog-rating__star"><span class="catalog-num-rating">4</span>
+													</div>
+													<div class="catalog-price">10 990 ₽</div>
+													<div class="catalog-store__text"><img src="/img/in-store.png" width="9" height="9" alt="В наличии" class="catalog-store__image">В наличии</div>
+													<button class="add-to-basket">В корзину</button>
+												</li>
+												<li class="catalog_item catalog_item--default-view">
+													<div class="catalog_item_image"><img src="/img/03.png" alt="model01"></div>
+													<ul class="catalog_item_icons">
+														<li class="catalog_item_icons__preview"><img src="/img/03-01.png" alt="01"></li>
+														<li class="catalog_item_icons__preview"><img src="/img/03-02.png" alt="02"></li>
+														<li class="catalog_item_icons__preview"><img src="/img/03-03.png" alt="03"></li>
+													</ul>
+													<ul class="catalog_item_info">
+														<li class="catalog_item__model_name">Archos 50 Oxygen Plus</li>
+														<li class="catalog_item__data_type">Тип SIM-Карты
+															<div class="catalog_item__data_val">Micro-SIM</div>
+														</li>
+														<li class="catalog_item__data_type">Количество SIM-карт
+															<div class="catalog_item__data_val">2</div>
+														</li>
+														<li class="catalog_item__data_type">Цвет
+															<div class="catalog_item__data_val">Серый</div>
+														</li>
+														<li class="catalog_item__data_type">ОС
+															<div class="catalog_item__data_val">Android</div>
+														</li>
+														<li class="catalog_item__data_type">Связь
+															<div class="catalog_item__data_val">Есть</div>
+														</li>
+														<li class="catalog_item__data_type">4G(LTE)
+															<div class="catalog_item__data_val">Нет</div>
+														</li>
+														<li class="catalog_item__data_type">GPS-модуль
+															<div class="catalog_item__data_val">Есть</div>
+														</li>
+													</ul>
+													<div class="catalog-rating"><img src="/img/star-red.png" alt="1star" class="catalog-rating__star"><img src="/img/star-red.png" alt="1star" class="catalog-rating__star"><img src="/img/star-red.png" alt="1star" class="catalog-rating__star"><img src="/img/star-red.png" alt="1star" class="catalog-rating__star"><img src="/img/star-white.png" alt="no star" class="catalog-rating__star"><span class="catalog-num-rating">4</span>
+													</div>
+													<div class="catalog-price">9 990 ₽</div>
+													<div class="catalog-store__text"><img src="/img/in-store.png" width="9" height="9" alt="В наличии" class="catalog-store__image">В наличии</div>
+													<button class="add-to-basket">В корзину</button>
+												</li>
+						</ul>
+					</div>
+					<div class="container_items table-thumbnail-view items--hide">
+						<ul class="catalog_item item-in-table">
+							<li class="col-1">
+								<div class="catalog_item_image"><img src="/img/01.png" alt="model01"></div>
+								<ul class="catalog_item_icons icons-in-table">
+									<li class="catalog_item_icons__preview"><img src="/img/01-01.png" alt="01"></li>
+									<li class="catalog_item_icons__preview"><img src="/img/01-02.png" alt="02"></li>
+									<li class="catalog_item_icons__preview"><img src="/img/01-03.png" alt="03"></li>
 								</ul>
+								<div class="catalog_item_prod_info prod-info-in-table">
+									<div class="prod_info">Артикул<span class="prod_num"> 189238</span></div>
+								</div>
+							</li>
+							<li class="col-2">
+								<div class="info_data">
+									<div class="catalog_item__model_name name-in-table">Samsung GT-I9301I GALAXY S 3</div>
+									<div class="catalog_item__description description-in-table">
+										Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White
+										Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE,
+										GPRS, WAP, Wi-Fi, Количество ядер
+										процессора 4, Частота процессора 1400 МГц...
+									</div>
+									<div class="catalog-rating rating-in-table"><img src="/img/star-red.png" alt="1star" class="catalog-rating__star"><img src="/img/star-red.png" alt="1star" class="catalog-rating__star"><img src="/img/star-red.png" alt="1star" class="catalog-rating__star"><img src="/img/star-red.png" alt="1star" class="catalog-rating__star"><img src="/img/star-white.png" alt="no star" class="catalog-rating__star"><span class="catalog-num-rating">4</span>
+									</div>
+								</div>
+							</li>
+							<li class="col-3">
+								<div class="info_price">
+									<div class="catalog-price price-in-table">11 290 ₽</div>
+								</div>
+								<div class="basket-info">
+									<button class="add-to-basket button-in-table">В корзину</button>
+									<div class="catalog-store__text text-in-table"><img src="/img/in-store.png" width="9" height="9" alt="В наличии" class="catalog-store__image">В наличии</div>
+								</div>
+							</li>
+						</ul>
+						<ul class="catalog_item item-in-table">
+							<li class="col-1">
+								<div class="catalog_item_image"><img src="/img/01.png" alt="model01"></div>
+								<ul class="catalog_item_icons icons-in-table">
+									<li class="catalog_item_icons__preview"><img src="/img/01-01.png" alt="01"></li>
+									<li class="catalog_item_icons__preview"><img src="/img/01-02.png" alt="02"></li>
+									<li class="catalog_item_icons__preview"><img src="/img/01-03.png" alt="03"></li>
+								</ul>
+								<div class="catalog_item_prod_info prod-info-in-table">
+									<div class="prod_info">Артикул<span class="prod_num"> 189238</span></div>
+								</div>
+								<!--td-->
+							</li>
+							<li class="col-2">
+								<div class="info_data">
+									<div class="catalog_item__model_name name-in-table">Samsung GT-I9301I GALAXY S 3</div>
+									<div class="catalog_item__description description-in-table">
+										Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White
+										Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE,
+										GPRS, WAP, Wi-Fi, Количество ядер
+										процессора 4, Частота процессора 1400 МГц...
+									</div>
+									<div class="catalog-rating rating-in-table"><img src="/img/star-red.png" alt="1star" class="catalog-rating__star"><img src="/img/star-red.png" alt="1star" class="catalog-rating__star"><img src="/img/star-red.png" alt="1star" class="catalog-rating__star"><img src="/img/star-red.png" alt="1star" class="catalog-rating__star"><img src="/img/star-white.png" alt="no star" class="catalog-rating__star"><span class="catalog-num-rating">4</span>
+									</div>
+									<!-- td-->
+								</div>
+							</li>
+							<li class="col-3">
+								<div class="info_price">
+									<div class="catalog-price price-in-table">11 290 ₽</div>
+								</div>
+								<div class="basket-info">
+									<button class="add-to-basket button-in-table">В корзину</button>
+									<div class="catalog-store__text text-in-table"><img src="/img/in-store.png" width="9" height="9" alt="В наличии" class="catalog-store__image">В наличии</div>
+								</div>
+							</li>
+						</ul>
+						<ul class="catalog_item item-in-table">
+							<!--td-->
+							<li class="col-1">
+								<div class="catalog_item_image"><img src="/img/01.png" alt="model01"></div>
+								<ul class="catalog_item_icons icons-in-table">
+									<li class="catalog_item_icons__preview"><img src="/img/01-01.png" alt="01"></li>
+									<li class="catalog_item_icons__preview"><img src="/img/01-02.png" alt="02"></li>
+									<li class="catalog_item_icons__preview"><img src="/img/01-03.png" alt="03"></li>
+								</ul>
+								<div class="catalog_item_prod_info prod-info-in-table">
+									<div class="prod_info">Артикул<span class="prod_num"> 189238</span></div>
+								</div>
+								<!--td-->
+							</li>
+							<li class="col-2">
+								<div class="info_data">
+									<div class="catalog_item__model_name name-in-table">Samsung GT-I9301I GALAXY S 3</div>
+									<div class="catalog_item__description description-in-table">
+										Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White
+										Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE,
+										GPRS, WAP, Wi-Fi, Количество ядер
+										процессора 4, Частота процессора 1400 МГц...
+									</div>
+									<div class="catalog-rating rating-in-table"><img src="/img/star-red.png" alt="1star" class="catalog-rating__star"><img src="/img/star-red.png" alt="1star" class="catalog-rating__star"><img src="/img/star-red.png" alt="1star" class="catalog-rating__star"><img src="/img/star-red.png" alt="1star" class="catalog-rating__star"><img src="/img/star-white.png" alt="no star" class="catalog-rating__star"><span class="catalog-num-rating">4</span>
+									</div>
+									<!-- td-->
+								</div>
+							</li>
+							<li class="col-3">
+								<div class="info_price">
+									<div class="catalog-price price-in-table">11 290 ₽</div>
+								</div>
+								<div class="basket-info">
+									<button class="add-to-basket button-in-table">В корзину</button>
+									<div class="catalog-store__text text-in-table"><img src="/img/in-store.png" width="9" height="9" alt="В наличии" class="catalog-store__image">В наличии</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="container_items">
+						<div class="table-thumbnail-view">
+							<div class="catalog_item item-in-table item--in-row-list">
+								<div class="catalog_item_prod_info prod-info-in-table">
+									<div class="prod_info prod_info--list-view">Артикул</div>
+									<div class="prod_num prod-num--in-row">189238</div>
+									<div class="description--wrapper">
+										<div class="fixed_wrapper">
+											<div class="catalog_item__model_name model_name--list-view list-view--in-row">Смартфон Samsung GT-I9301I GALAXY S 3</div>
+										</div>
+									</div>
+									<div class="catalog-price catalog-price--in-row">11 290 ₽</div>
+									<div class="catalog-store__text store__text--in-row"><img src="/img/in-store.png" width="9" height="9" alt="В наличии" class="catalog-store__image image--in-row">В наличии
+										<button class="add-to-basket button--in-row">В корзину</button>
+									</div>
+								</div>
 							</div>
-							<!--.catalog_item__model-->
-							<!--ul.catalog_item_model-features-->
-							<!--   li.catalog-item__model-type Тип SIM-Карты-->
-							<!--   li.catalog-item__num-of-sim Кол-во SIM-карт-->
-							<!--   li.catalog-item__model-color Цвет-->
-							<!--   li.catalog-item__model-os ОС-->
-							<!--   li.catalog-item__model-network Связь 3G-->
-							<!--   li.catalog-item__model-4g 4G(LTE)-->
-							<!--   li.catalog-item__model-gps GPS-модуль-->
-							<table class="catalog_item_info">
-								<tr>
-									<th colspan="2" class="catalog_item__model">Samsung GT-I9301I Galaxy S 3</th>
-								</tr>
-								<tr>
-									<td>Тип SIM-Карты</td>
-									<td>Micro-SIM</td>
-								</tr>
-								<tr>
-									<td>Кол-во SIM-карт</td>
-									<td>1</td>
-								</tr>
-								<tr>
-									<td>Цвет</td>
-									<td>Белый</td>
-								</tr>
-								<tr>
-									<td>ОС</td>
-									<td>Android</td>
-								</tr>
-								<tr>
-									<td>Связь 3G</td>
-									<td>Есть</td>
-								</tr>
-								<tr>
-									<td>4G(LTE)</td>
-									<td>Нет</td>
-								</tr>
-								<tr>
-									<td>GPS-модуль</td>
-									<td>Есть</td>
-								</tr>
-							</table>
-							<div class="catalog-rating">Rating</div>
-							<div class="catalog-price">Price</div>
-							<div class="store">В наличии</div>
-							<button>В корзину</button>
-						</li>
+							<div class="catalog_item item-in-table item--in-row-list">
+								<div class="catalog_item_prod_info prod-info-in-table">
+									<div class="prod_info prod_info--list-view">Артикул</div>
+									<div class="prod_num prod-num--in-row">189238</div>
+									<div class="description--wrapper">
+										<div class="fixed_wrapper">
+											<div class="catalog_item__model_name model_name--list-view list-view--in-row">Смартфон Samsung GT-I9301I GALAXY S 3</div>
+										</div>
+									</div>
+									<div class="catalog-price catalog-price--in-row">11 290 ₽</div>
+									<div class="catalog-store__text store__text--in-row"><img src="/img/in-store.png" width="9" height="9" alt="В наличии" class="catalog-store__image image--in-row">В наличии
+										<button class="add-to-basket button--in-row">В корзину</button>
+									</div>
+								</div>
+							</div>
+							<div class="catalog_item item-in-table item--in-row-list">
+								<div class="catalog_item_prod_info prod-info-in-table">
+									<div class="prod_info prod_info--list-view">Артикул</div>
+									<div class="prod_num prod-num--in-row">189238</div>
+									<div class="description--wrapper">
+										<div class="fixed_wrapper">
+											<div class="catalog_item__model_name model_name--list-view list-view--in-row">Смартфон Samsung GT-I9301I GALAXY S 3</div>
+										</div>
+									</div>
+									<div class="catalog-price catalog-price--in-row">11 290 ₽</div>
+									<div class="catalog-store__text store__text--in-row"><img src="/img/in-store.png" width="9" height="9" alt="В наличии" class="catalog-store__image image--in-row">В наличии
+										<button class="add-to-basket button--in-row">В корзину</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<ul class="pager">
+						<li class="pager__page"><a href="" class="pager__link"><</a></li>
+						<li class="pager__page pager__page--active"><a href="" class="pager__link">1</a></li>
+						<li class="pager__page"><a href="" class="pager__link">2</a></li>
+						<li class="pager__page"><a href="" class="pager__link">3</a></li>
+						<li class="pager__page"><a href="" class="pager__link">></a></li>
+						<!--ul.catalog-->
+						<!--   li.catalog_item.item-in-table-->
+						<!--      .prod_info Артикул-->
+						<!--         span.prod_num  189238-->
+						<!--      .catalog_item__model_name.name-in-table Смартфон Samsung GT-I9301I GALAXY S 3-->
+						<!--      .catalog-price 11 290 ₽-->
+						<!--      .catalog-store__text-->
+						<!--         img(src="/img/in-store.png", width="9", height="9", alt="В наличии").catalog-store__image-->
+						<!--         | В наличии-->
+						<!--      button().add-to-basket.button-in-table В корзину-->
+						
+						
 					</ul>
 					<!--Created by ignatiev.no on 26.10.2015.
 					-->
->>>>>>> fd8c52989582142cc818e518757491e4299adb9e
 				</aside>
 			</div>
 			<div class="container">
@@ -350,9 +814,9 @@
 				</div>
 				<div class="footer-right">
 					<ul class="socials socials--footer">
-						<li class="socials__item socials__item--footer"><a href="#" class="link-fb link--footer">fb</a></li>
-						<li class="socials__item socials__item--footer"><a href="#" class="link-vk link--footer">vk</a></li>
-						<li class="socials__item socials__item--footer"><a href="#" class="link-tw link--footer">tw</a></li>
+						<li class="socials__item socials__item--footer"><a href="" class="link-vk--footer">vk</a></li>
+						<li class="socials__item socials__item--footer"><a href="" class="link-fb--footer">fb</a></li>
+						<li class="socials__item socials__item--footer"><a href="" class="link-tw--footer">tw</a></li>
 					</ul>
 					<ul class="links_footer">
 						<li class="links__item links__item_footer"><a href="#" class="link_footer">Планшеты</a></li>

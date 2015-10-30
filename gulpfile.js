@@ -49,7 +49,7 @@ gulp.task('jade', function() {
 gulp.task('server', function () {
 	browserSync.init({
 		port : paths.browserSync.serverPort,
-		//tunnel: 'test3',
+		tunnel: 'samplestore',
 		server: {
 			baseDir: paths.browserSync.baseDir
 		}
