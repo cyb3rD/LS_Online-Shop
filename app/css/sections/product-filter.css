@@ -29,6 +29,15 @@
   margin-bottom: 15px;
 }
 
+.filter--accordeon {
+  background-image: url("/img/icons/close-filter.png");
+  background-repeat: no-repeat;
+  background-position: 95% center;
+}
+.filter--accordeon:hover {
+  cursor: pointer;
+}
+
 .filter_options {
   font-family: OpenSansRegular;
   font-size: 14px;
