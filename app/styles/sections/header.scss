@@ -31,15 +31,57 @@ $header2-height     : 96px;
 .socials__item {
   display: inline-block;
   height: 26px;
-  width: 30px;
+  border-radius: 50%;
+  background-color: #333333;
+  width: 26px;
   margin-left: 16px;
+  text-indent: -9999px;
 }
+
 
 .socials__item:first-child {
   margin-left: 0px;
 }
-/* TODO - sprites for social icons */
 
+.social__item {
+  display: block;
+  width: 26px;
+  height: 26px;
+
+}
+
+//=================================================
+// create sprite
+//$socials: vk, tw, fb;
+//$map: sprite-map('icons/*.png', $spacing: 30px);
+//
+//@each $social in $socials {
+//  .link-#{$social} {
+    // ver2
+    //$sprite-image: sprite-file($map, $social);
+    //$sprite-map: sprite-url($map);
+    //// sprite-position($map, $sprite, $offset-x, $offset-y, $use-percentages)
+    //$sprite-position: sprite-position($map, $social);
+    //
+    //@debug $sprite-position;
+    //background: $sprite-map $sprite-position no-repeat;
+    ////background-position: 50% 50%;
+    //
+    //$sprite-height: image-height(#{$sprite-image});
+    //$sprite-width: image-width(#{$sprite-image});
+    //
+    //height: 26px;
+    //width: 26px;
+//=================================================
+
+// array for modificators
+$socials: vk, tw, fb;
+
+@each $social in $socials {
+  .link-#{$social} {
+    background: url('/img/icons/#{$social}.png') 50% 50% no-repeat;
+  }
+}
 
 .contacts {
   float: right;
@@ -49,13 +91,29 @@ $header2-height     : 96px;
 }
 .contacts__address {
   padding-right: 105px;
+  padding-left: 18px;
+}
+
+.map_icon {
+  background-image: url('/img/icons/map-pin.png');
+  background-repeat: no-repeat;
+  background-position: 0px center;
+}
+.phone_icon {
+  background-image: url('/img/icons/telephone.png');
+  background-repeat: no-repeat;
+  background-position: 0px center;
 }
 .contacts__phone {
   margin-right: 0px;
   font-family: OpenSansSemiBold;
   font-size: 18px;
+  padding-left: 18px;
 }
-
+.phone_link {
+  text-decoration: none;
+  color: #333333;
+}
 /* TODO - sprites for addr. & phone */
 
 .top-search {

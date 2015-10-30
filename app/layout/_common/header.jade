@@ -4,16 +4,16 @@ header.header
       .container
          // Social icons
          ul.socials.socials--header
-            li.socials__item
-               a(href="#").link-fb fb
-            li.socials__item
-               a(href="#").link-vk vk
-            li.socials__item
-               a(href="#").link-tw tw
+            -var socials = ['vk', 'fb', 'tw']
+            each social in socials
+               li.socials__item
+                  a(href="" class="social__item link-" + social)= social
+
          // Contacts
          ul.contacts
-            li.contacts__address ул. Маяковская 6, офис 17
-            li.contacts__phone +7 (921) 123-12-13
+            li.map_icon.contacts__address ул. Маяковская 6, офис 17
+            li.phone_icon.contacts__phone
+               a(href="tel:+79211231313").phone_link +7 (921) 123-12-13
          // Logo image
 
    .top-search

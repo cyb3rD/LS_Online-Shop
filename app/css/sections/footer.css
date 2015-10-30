@@ -3,7 +3,6 @@
   margin-top: -220px;
   height: 220px;
   color: white;
-  background-image: url("../img/background--footer.png");
 }
 
 .footer-left {
@@ -24,11 +23,32 @@
 
 .socials__item--footer {
   height: 42px;
+  background-color: #ffffff;
   width: 42px;
 }
 
-.link--footer {
+.link-vk--footer {
+  background: url("/img/icons/vk--footer.png") 50% 50% no-repeat;
+  display: block;
   color: white;
+  width: 42px;
+  height: 42px;
+}
+
+.link-tw--footer {
+  background: url("/img/icons/tw--footer.png") 50% 50% no-repeat;
+  display: block;
+  color: white;
+  width: 42px;
+  height: 42px;
+}
+
+.link-fb--footer {
+  background: url("/img/icons/fb--footer.png") 50% 50% no-repeat;
+  display: block;
+  color: white;
+  width: 42px;
+  height: 42px;
 }
 
 .links_footer {

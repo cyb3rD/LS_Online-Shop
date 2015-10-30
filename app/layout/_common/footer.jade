@@ -5,32 +5,20 @@ footer.footer
             a.logo-link(href="/")
                img.logo-pic(src="/img/cooltech-footer-logo.png" alt="cooltech logo")
                span.logo-text
-         //- socials_footer - модифицирует блок
 
       .footer-right
+         //- Bottom socials
          ul.socials.socials--footer
-            li.socials__item.socials__item--footer
-               a(href="#").link-fb.link--footer fb
-            li.socials__item.socials__item--footer
-               a(href="#").link-vk.link--footer vk
-            li.socials__item.socials__item--footer
-               a(href="#").link-tw.link--footer tw
+            -var socials = ['vk', 'fb', 'tw']
+            each social in socials
+               li.socials__item.socials__item--footer
+                  a(href="" class="link-" + social + "--footer")= social
 
-         //- переписать как отдельный блок для ссылок в футере
+         //- Bottom links
          ul.links_footer
-            li.links__item.links__item_footer
-               a(href="#").link_footer Планшеты
-            li.links__item.links__item_footer
-               a(href="#").link_footer Мобильные телефоны
-            li.links__item.links__item_footer
-               a(href="#").link_footer Mp3-плееры
-            li.links__item.links__item_footer
-               a(href="#").link_footer Персональные компьютеры
-            li.links__item.links__item_footer
-               a(href="#").link_footer Ноутбуки
-            li.links__item.links__item_footer
-               a(href="#").link_footer Аксессуары
-            li.links__item.links__item_footer
-               a(href="#").link_footer Бытовая техника
+            -var menuItems = ['Планшеты', 'Мобильные телефоны', 'Mp3-плееры', 'Персональные компьютеры', 'Ноутбуки', 'Аксессуары', 'Бытовая техника']
+            each item in menuItems
+               li.links__item.links__item_footer
+                  a(href="#").link_footer= item
 
    .copyright All rights reserved. 2015. no copy allowed
