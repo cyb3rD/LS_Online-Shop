@@ -6,9 +6,9 @@
 mixin insert_catalog_item(mainFoto, modelName, simType, numOfSim,phoneColor,phoneOs,network3G,network4G,gprs,phonePrice)
    li.catalog_item.catalog_item--default-view
       .catalog_item_image
-         img(src="/img/"+ mainFoto + ".png",alt="model01").catalog_item_icons__big-foto
+         img(src="/img/"+ mainFoto + "-01.png",alt="model01").catalog_item_icons__big-foto
       ul.catalog_item_icons
-         li.catalog_item_icons__preview
+         li.catalog_item_icons__preview.catalog_item_icons__preview--current
             img(src="/img/" + mainFoto + "-01.png", alt="01").catalog_item_icons__preview--foto-small
          li.catalog_item_icons__preview
             img(src="/img/" + mainFoto + "-02.png", alt="02").catalog_item_icons__preview--foto-small
@@ -30,14 +30,14 @@ mixin insert_catalog_item(mainFoto, modelName, simType, numOfSim,phoneColor,phon
             .catalog_item__data_val= network4G
          li.catalog_item__data_type GPS-модуль
             .catalog_item__data_val= gprs
-      .catalog-rating
-         //- TODO refactor for custom rating
-         img(src="/img/star-red.png", alt="1star").catalog-rating__star
-         img(src="/img/star-red.png", alt="1star").catalog-rating__star
-         img(src="/img/star-red.png", alt="1star").catalog-rating__star
-         img(src="/img/star-red.png", alt="1star").catalog-rating__star
-         img(src="/img/star-white.png", alt="no star").catalog-rating__star
-         span.catalog-num-rating 4
+      .rating-wrapper
+         ul.catalog-rating
+            li.catalog-rating__star
+            li.catalog-rating__star
+            li.catalog-rating__star
+            li.catalog-rating__star
+            li.catalog-rating__no-star
+            li.catalog-num-rating 4
       .catalog-price= phonePrice + " ₽"
       .catalog-store__text
             img(src="/img/in-store.png", width="9", height="9", alt="В наличии").catalog-store__image

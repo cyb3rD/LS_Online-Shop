@@ -39,14 +39,14 @@ include mixins
    ul.catalog_item.item-in-table
       li.col-1
          .catalog_item_image
-               img(src="/img/01.png",alt="model01").catalog_item_icons__big-foto
+               img(src="/img/01-01.png",alt="model01").catalog_item_icons__big-foto
             ul.catalog_item_icons.icons-in-table
+               li.catalog_item_icons__preview.catalog_item_icons__preview--current
+                  img(src="/img/01-01.png", alt="01").catalog_item_icons__preview--foto-small
                li.catalog_item_icons__preview
-                  img(src="/img/01-01.png", alt="01")
+                  img(src="/img/01-02.png", alt="02").catalog_item_icons__preview--foto-small
                li.catalog_item_icons__preview
-                  img(src="/img/01-02.png", alt="02")
-               li.catalog_item_icons__preview
-                  img(src="/img/01-03.png", alt="03")
+                  img(src="/img/01-03.png", alt="03").catalog_item_icons__preview--foto-small
             .catalog_item_prod_info.prod-info-in-table
                .prod_info Артикул
                   span.prod_num  189238
@@ -59,13 +59,13 @@ include mixins
                   | GPRS, WAP, Wi-Fi, Количество ядер
                   | процессора 4, Частота процессора 1400 МГц...
             .catalog-rating.rating-in-table
-               //- TODO refactor for custom rating
-               img(src="/img/star-red.png", alt="1star").catalog-rating__star
-               img(src="/img/star-red.png", alt="1star").catalog-rating__star
-               img(src="/img/star-red.png", alt="1star").catalog-rating__star
-               img(src="/img/star-red.png", alt="1star").catalog-rating__star
-               img(src="/img/star-white.png", alt="no star").catalog-rating__star
-               span.catalog-num-rating 4
+               ul.catalog-rating.catalog-rating--in-table
+                  li.catalog-rating__star
+                  li.catalog-rating__star
+                  li.catalog-rating__star
+                  li.catalog-rating__star
+                  li.catalog-rating__no-star
+                  li.catalog-num-rating 4
       li.col-3
          .info_price
             .catalog-price.price-in-table 11 290 ₽
@@ -77,38 +77,36 @@ include mixins
    ul.catalog_item.item-in-table
       li.col-1
          .catalog_item_image
-            img(src="/img/01.png",alt="model01").catalog_item_icons__big-foto
+            img(src="/img/02-01.png",alt="model01").catalog_item_icons__big-foto
          ul.catalog_item_icons.icons-in-table
+            li.catalog_item_icons__preview.catalog_item_icons__preview--current
+               img(src="/img/02-01.png", alt="01").catalog_item_icons__preview--foto-small
             li.catalog_item_icons__preview
-               img(src="/img/01-01.png", alt="01")
+               img(src="/img/02-02.png", alt="02").catalog_item_icons__preview--foto-small
             li.catalog_item_icons__preview
-               img(src="/img/01-02.png", alt="02")
-            li.catalog_item_icons__preview
-               img(src="/img/01-03.png", alt="03")
+               img(src="/img/02-03.png", alt="03").catalog_item_icons__preview--foto-small
          .catalog_item_prod_info.prod-info-in-table
             .prod_info Артикул
                span.prod_num  189238
          //td
       li.col-2
          .info_data
-            .catalog_item__model_name.name-in-table Samsung GT-I9301I GALAXY S 3
+            .catalog_item__model_name.name-in-table Microsoft Lumia 640 RM-1077
             .catalog_item__description.description-in-table
-               | Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White
-               | Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE,
-               | GPRS, WAP, Wi-Fi, Количество ядер
-               | процессора 4, Частота процессора 1400 МГц...
+               | Вместе с новой Microsoft Lumia 640 Dual SIM (RM-1077) вы открываете
+               |мир ярких цифровых возможностей. Этот многофункциональный смартфон уже содержит набор бесплатных
+               |сервисов Microsoft...
             .catalog-rating.rating-in-table
-               //- TODO refactor for custom rating
-               img(src="/img/star-red.png", alt="1star").catalog-rating__star
-               img(src="/img/star-red.png", alt="1star").catalog-rating__star
-               img(src="/img/star-red.png", alt="1star").catalog-rating__star
-               img(src="/img/star-red.png", alt="1star").catalog-rating__star
-               img(src="/img/star-white.png", alt="no star").catalog-rating__star
-               span.catalog-num-rating 4
-            // td
+               ul.catalog-rating.catalog-rating--in-table
+                  li.catalog-rating__star
+                  li.catalog-rating__star
+                  li.catalog-rating__star
+                  li.catalog-rating__star
+                  li.catalog-rating__no-star
+                  li.catalog-num-rating 4
       li.col-3
          .info_price
-            .catalog-price.price-in-table 11 290 ₽
+            .catalog-price.price-in-table 10 990 ₽
          .basket-info
             button().add-to-basket.button-in-table В корзину
             .catalog-store__text.text-in-table
@@ -119,38 +117,35 @@ include mixins
       //td
       li.col-1
          .catalog_item_image
-            img(src="/img/01.png",alt="model01").catalog_item_icons__big-foto
+            img(src="/img/03-01.png",alt="model01").catalog_item_icons__big-foto
          ul.catalog_item_icons.icons-in-table
+            li.catalog_item_icons__preview.catalog_item_icons__preview--current
+               img(src="/img/03-01.png", alt="01").catalog_item_icons__preview--foto-small
             li.catalog_item_icons__preview
-               img(src="/img/01-01.png", alt="01")
+               img(src="/img/03-02.png", alt="02").catalog_item_icons__preview--foto-small
             li.catalog_item_icons__preview
-               img(src="/img/01-02.png", alt="02")
-            li.catalog_item_icons__preview
-               img(src="/img/01-03.png", alt="03")
+               img(src="/img/03-03.png", alt="03").catalog_item_icons__preview--foto-small
          .catalog_item_prod_info.prod-info-in-table
             .prod_info Артикул
                span.prod_num  189238
          //td
       li.col-2
          .info_data
-            .catalog_item__model_name.name-in-table Samsung GT-I9301I GALAXY S 3
+            .catalog_item__model_name.name-in-table Archos 50 Oxygen Plus
             .catalog_item__description.description-in-table
-               | Смартфон Samsung GT-I9301I GALAXY S 3 Ceramic White
-               | Моноблок, Micro-SIM, Android 4.4, 3G, Bluetooth 4.0, EDGE,
-               | GPRS, WAP, Wi-Fi, Количество ядер
-               | процессора 4, Частота процессора 1400 МГц...
+               | Смартфон Archos 50 Oxygen Plus, серый. Моноблок, Micro-SIM, Android , 3G,
+               |Bluetooth, USB-подключение к ПК, Wi-Fi, Разрешение основной камеры 8 Мп...
             .catalog-rating.rating-in-table
-               //- TODO refactor for custom rating
-               img(src="/img/star-red.png", alt="1star").catalog-rating__star
-               img(src="/img/star-red.png", alt="1star").catalog-rating__star
-               img(src="/img/star-red.png", alt="1star").catalog-rating__star
-               img(src="/img/star-red.png", alt="1star").catalog-rating__star
-               img(src="/img/star-white.png", alt="no star").catalog-rating__star
-               span.catalog-num-rating 4
-            // td
+               ul.catalog-rating.catalog-rating--in-table
+                  li.catalog-rating__star
+                  li.catalog-rating__star
+                  li.catalog-rating__star
+                  li.catalog-rating__star
+                  li.catalog-rating__no-star
+                  li.catalog-num-rating 4
       li.col-3
          .info_price
-            .catalog-price.price-in-table 11 290 ₽
+            .catalog-price.price-in-table 9 990 ₽
          .basket-info
             button().add-to-basket.button-in-table В корзину
             .catalog-store__text.text-in-table
@@ -201,7 +196,7 @@ include mixins
 
 ul.pager
    li.pager__page
-      a(href="").pager__link <
+      a(href="").pager__link &lt;
    li.pager__page.pager__page--active
       a(href="").pager__link 1
    li.pager__page
@@ -209,24 +204,5 @@ ul.pager
    li.pager__page
       a(href="").pager__link 3
    li.pager__page
-      a(href="").pager__link >
-
-
-
-
-   //ul.catalog
-   //   li.catalog_item.item-in-table
-   //      .prod_info Артикул
-   //         span.prod_num  189238
-   //      .catalog_item__model_name.name-in-table Смартфон Samsung GT-I9301I GALAXY S 3
-   //      .catalog-price 11 290 ₽
-   //      .catalog-store__text
-   //         img(src="/img/in-store.png", width="9", height="9", alt="В наличии").catalog-store__image
-   //         | В наличии
-   //      button().add-to-basket.button-in-table В корзину
-
-
-
-//
-   Created by ignatiev.no on 26.10.2015.
+      a(href="").pager__link &gt;
 

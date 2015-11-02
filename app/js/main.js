@@ -46,20 +46,16 @@ $(document).ready(function() {
 	});
 
 	// Slideshow
-	//$('.catalog_item_icons li').click(function() {
-	//	_src = $('img', this).attr('src');
-	//	console.log(_src);
-	//	_obj = $(this).parents('.catalog_item'); // for default-view
-	//	//_obj = $(this).parents('.catalog_item--default-view');
-	//	$('.catalog_item_icons__big-foto', _obj).attr('src', _src);
-	//});
-
-	$(".catalog_item_icons__preview").click(function() {
-		$(".catalog_item_icons__big-foto").attr("src", $(this).children("img").attr("src"));
-		console.log($(".catalog_item_icons__big-foto").attr("src"));
+	$('.catalog_item_icons li').click(function() {
+	    $(this).addClass("catalog_item_icons__preview--current");
+		$(this).next().removeClass("catalog_item_icons__preview--current");
+		$(this).prev().removeClass("catalog_item_icons__preview--current");
+		_src = $('img', this).attr('src');
+	    console.log(_src);
+	    _obj = $(this).parents('.catalog_item'); // for default-view
+	    //_obj = $(this).parents('.catalog_item--default-view');
+	    $('.catalog_item_icons__big-foto', _obj).attr('src', _src);
 	});
-
-
 
 	//Reset mobiles filter
 	$("[name = reset-mobiles]").on('click', function(e) {
