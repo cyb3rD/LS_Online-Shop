@@ -46,19 +46,19 @@ $(document).ready(function() {
 	});
 
 	// Slideshow
-	$(".catalog_item_icons__preview").each(function () {
-		$(this).on("click", function() {
-			console.log('Clicked preview!');
-			var smallImagePath = $(this).children("img").attr("src");
-			console.log(smallImagePath);
-			// Here we will change the big picture
-			// get big picture tag
-			var pos = smallImagePath.slice(5, 7);
-			console.log(pos);
-			//console.log($(".catalog_item_image").eq(pos-1).children("img").attr("src"));
-			$(".catalog_item_image").eq(pos-1).children("img").attr("src", smallImagePath);
-		});
+	//$('.catalog_item_icons li').click(function() {
+	//	_src = $('img', this).attr('src');
+	//	console.log(_src);
+	//	_obj = $(this).parents('.catalog_item'); // for default-view
+	//	//_obj = $(this).parents('.catalog_item--default-view');
+	//	$('.catalog_item_icons__big-foto', _obj).attr('src', _src);
+	//});
+
+	$(".catalog_item_icons__preview").click(function() {
+		$(".catalog_item_icons__big-foto").attr("src", $(this).children("img").attr("src"));
+		console.log($(".catalog_item_icons__big-foto").attr("src"));
 	});
+
 
 
 	//Reset mobiles filter
