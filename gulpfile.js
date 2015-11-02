@@ -49,7 +49,8 @@ gulp.task('jade', function() {
 gulp.task('server', function () {
 	browserSync.init({
 		port : paths.browserSync.serverPort,
-		tunnel: 'samplestore',
+		// Tunnel for access from remote PC
+		// tunnel: 'samplestore',
 		server: {
 			baseDir: paths.browserSync.baseDir
 		}

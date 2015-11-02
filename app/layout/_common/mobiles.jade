@@ -1,7 +1,7 @@
 include mixins
 
 //- Mosaic view
-.container_items.items--hide
+#mosaic.container_items
 
    ul.catalog
       //- using jade-mixin for paste element
@@ -35,7 +35,7 @@ include mixins
       "Нет", "Есть", "9 990")
 
 //- Thumbnail Table List view
-.container_items.table-thumbnail-view.items--hide
+#thumbs.container_items.table-thumbnail-view.items--hide
    ul.catalog_item.item-in-table
       li.col-1
          .catalog_item_image
@@ -158,7 +158,7 @@ include mixins
                |В наличии
 
 //- Simple ListView
-.container_items
+#list.container_items.items--hide
    .table-thumbnail-view
       .catalog_item.item-in-table.item--in-row-list
            .catalog_item_prod_info.prod-info-in-table

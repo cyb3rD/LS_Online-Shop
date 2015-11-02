@@ -9,10 +9,10 @@ footer.footer
       .footer-right
          //- Bottom socials
          ul.socials.socials--footer
-            -var socials = ['vk', 'fb', 'tw']
+            -var socials = ['fb', 'vk', 'tw']
             each social in socials
                li.socials__item.socials__item--footer
-                  a(href="" class="link-" + social + "--footer")= social
+                  a(href="" class="socials__footer-link link-" + social + "--footer")= social
 
          //- Bottom links
          ul.links_footer

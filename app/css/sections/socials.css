@@ -1,0 +1,46 @@
+.icons-sprite, .link-vk, .link-fb, .link-tw {
+  background-image: url('../../img/icons-sf200e67212.png');
+  background-repeat: no-repeat;
+}
+
+.link-vk {
+  background-position: 0 -1290px;
+}
+.link-vk:hover, .link-vk.vk-hover {
+  background-position: 0 -1208px;
+}
+
+.link-fb {
+  background-position: 0 -345px;
+}
+.link-fb:hover, .link-fb.fb-hover {
+  background-position: 0 -263px;
+}
+
+.link-tw {
+  background-position: 0 -944px;
+}
+.link-tw:hover, .link-tw.tw-hover {
+  background-position: 0 -862px;
+}
+
+.link-vk {
+  background-position: 9px -1284px;
+}
+.link-vk:hover {
+  background-position: 9px -1202px;
+}
+
+.link-fb {
+  background-position: 10px -339px;
+}
+.link-fb:hover {
+  background-position: 10px -257px;
+}
+
+.link-tw {
+  background-position: 5px -938px;
+}
+.link-tw:hover {
+  background-position: 5px -856px;
+}

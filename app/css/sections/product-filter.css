@@ -10,6 +10,9 @@
 
 .button-clear {
   color: #5db2fc;
+  border: none;
+  text-decoration: underline;
+  background-color: #fbfbfb;
 }
 
 .filter_group {
@@ -29,18 +32,29 @@
   margin-bottom: 15px;
 }
 
-.filter--accordeon {
+.filter--accordian {
   background-image: url("/img/icons/close-filter.png");
   background-repeat: no-repeat;
   background-position: 95% center;
 }
-.filter--accordeon:hover {
+.filter--accordian:hover {
   cursor: pointer;
 }
 
 .filter_options {
   font-family: OpenSansRegular;
   font-size: 14px;
+}
+
+.filter--closed {
+  background-color: #d9e5ea;
+  background-image: url("/img/icons/open-filter.png");
+  background-repeat: no-repeat;
+  background-position: 95% center;
+}
+
+.colors-wrapper {
+  margin-bottom: 18px;
 }
 
 .filter_item {
@@ -393,4 +407,47 @@ input[type=checkbox].filter_item_color--check:checked + label:before {
   bottom: 1px;
   border: 1px solid #dee1e4;
   background-color: #7f401d;
+}
+
+.price-range-input:-moz-placeholder {
+  color: #000000;
+}
+
+.price-range-input::-webkit-input-placeholder {
+  color: #000000;
+}
+
+.price-from {
+  float: left;
+  padding-right: 25px;
+}
+
+.price-to {
+  float: right;
+}
+
+#slider-range-price {
+  margin-bottom: 30px;
+  margin-right: 30px;
+}
+
+.slider-range {
+  display: inline-block;
+  width: 275px;
+}
+
+.price-range-input {
+  width: 83px;
+  height: 30px;
+  border-radius: 3px;
+  border: 1px solid #ebedef;
+  margin-bottom: 18px;
+  color: #000000;
+  font-family: OpenSansSemiBold;
+  font-size: 14px;
+  padding-left: 5px;
+}
+
+.price-range-label {
+  margin-right: 15px;
 }

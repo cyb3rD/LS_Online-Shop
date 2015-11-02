@@ -14,6 +14,10 @@
   padding-left: 20px;
 }
 
+.list-view-header-caption--change-view {
+  padding-left: 200px;
+}
+
 .list-view-select {
   width: 144px;
   height: 28px;
@@ -45,17 +49,46 @@
 }
 
 .list-view__choose_list {
+  height: 53px;
   display: inline-block;
   border-left: 1px solid #dee1e4;
-}
-.list-view__choose_list:first-child {
-  border-left: none;
 }
 
 .list-view__img {
   display: inline-block;
-  padding-left: 17px;
-  padding-right: 17px;
+  cursor: pointer;
+  background-image: url("/img/icons-list.png");
+}
+
+/* Here we will using sprites */
+.list-view__img--preview, .list-view__img--preview-active {
+  background-position: -150px -33px;
+  width: 51px;
+  height: 53px;
+}
+
+.list-view__img--preview:hover, .list-view__img--preview-active {
+  background-position: -32px -150px;
+}
+
+.list-view__img--thumbnail, .list-view__img--thumbnail-active {
+  background-position: -625px -33px;
+  width: 51px;
+  height: 53px;
+}
+
+.list-view__img--thumbnail:hover, .list-view__img--thumbnail-active {
+  background-position: -625px -150px;
+}
+
+.list-view__img--list, .list-view__img--list-active {
+  background-position: -35px -32px;
+  width: 51px;
+  height: 53px;
+}
+
+.list-view__img--list:hover, .list-view__img--list-active {
+  background-position: -154px -150px;
 }
 
 .img--align-center {

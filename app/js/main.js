@@ -1,4 +1,136 @@
 $(document).ready(function() {
 	console.log('js Started!');
-	console.log($)
+	console.log($);
+	// Style select
+	$("#sort").select2();
+
+	// 2-Columns layout of important info block
+	$(".important-text-wrapper").columnize({
+		width: 535,
+		height: 400
+	});
+
+	// Change view
+	$(".list-view__img").on("click", function() {
+		switch ( $(".list-view__img").index (this) ) {
+			case 0:
+				console.log('Press 1st');
+				//$(this).addClass("list-view__img--preview-active");
+				$(".list-view__img").eq(0).addClass("list-view__img--preview-active");
+				$(".list-view__img").eq(1).removeClass("list-view__img--thumbnail-active");
+				$(".list-view__img").eq(2).removeClass("list-view__img--list-active");
+				$("#thumbs").slideDown(600);
+				$("#mosaic").slideUp();
+				$("#list").slideUp();
+				break;
+			case 1:
+				console.log('Press 2nd');
+				$(".list-view__img").eq(0).removeClass("list-view__img--preview-active");
+				$(".list-view__img").eq(1).addClass("list-view__img--thumbnail-active");
+				$(".list-view__img").eq(2).removeClass("list-view__img--list-active");
+				$("#mosaic").slideDown(600);
+				$("#thumbs").slideUp();
+				$("#list").slideUp();
+				break;
+			case 2:
+				console.log('Press 3rd!');
+				$(".list-view__img").eq(0).removeClass("list-view__img--preview-active");
+				$(".list-view__img").eq(1).removeClass("list-view__img--thumbnail-active");
+				$(".list-view__img").eq(2).addClass("list-view__img--list-active");
+				$("#list").slideDown(600);
+				$("#mosaic").slideUp();
+				$("#thumbs").slideUp();
+
+				break;
+		}
+	});
+
+	// Slideshow
+	$(".catalog_item_icons__preview").each(function () {
+		$(this).on("click", function() {
+			console.log('Clicked preview!');
+			var smallImagePath = $(this).children("img").attr("src");
+			console.log(smallImagePath);
+			// Here we will change the big picture
+			// get big picture tag
+			var pos = smallImagePath.slice(5, 7);
+			console.log(pos);
+			//console.log($(".catalog_item_image").eq(pos-1).children("img").attr("src"));
+			$(".catalog_item_image").eq(pos-1).children("img").attr("src", smallImagePath);
+		});
+	});
+
+
+	//Reset mobiles filter
+	$("[name = reset-mobiles]").on('click', function(e) {
+		e.preventDefault();
+		//$("[name ^= check-mobile-]").eq(0).attr('checked',false)
+		console.log("clear mobile filter");
+		$("[name ^= check-mobile-]").each(function() {
+			$(this).attr('checked', false);
+		})
+	});
+
+	//Reset OS filter
+	$("[name = reset-os]").on('click', function(e) {
+		e.preventDefault();
+		console.log("clear OS filter");
+		$("[name ^= check-os-]").each(function() {
+			$(this).attr('checked', false);
+		})
+	});
+
+	//Price Slider
+	$("#slider-range-price").slider({
+		range: true,
+		min: 0,
+		max: 20000,
+		values: [ 100, 13000 ],
+		slide: function( event, ui ) {
+			$( "#price-from" ).val(ui.values[ 0 ]);
+			$( "#price-to" ).val(ui.values[ 1 ]);
+		}
+	});
+
+	//Change from price
+	$( "#price-from").on('change', function() {
+		console.log("Val from: " + $(this).val());
+		//console.log("Val To: " + $("#price-to").val());
+		$("#slider-range-price").slider( "values", 0, $(this).val() );
+	});
+
+	//Change to price
+	$( "#price-to").on('change', function() {
+		console.log("Val from: " + $(this).val());
+		//console.log("Val To: " + $("#price-from").val());
+		$("#slider-range-price").slider( "values", 1, $(this).val() );
+	});
+
+
+	// Accordian filter
+	$(".filter_header.filter--accordian").on('click', function() {
+		// console.log('Accordian');
+		// Add classes for filter header
+		$(this).addClass("filter--closed");
+		$(this).parent().addClass("filter--closed");
+		$("ul.filter_options").each( function() {
+			//console.log($(this));
+			$(this).slideUp();
+		});
+
+		// Check of visibility by viewing the next element
+		if(!$(this).next().is(":visible")) {
+			//$(this).next().slideDown();
+			$(this).removeClass("filter--closed");
+			$(this).parent().removeClass("filter--closed");
+			$("ul.filter_options").each( function() {
+				//console.log($(this));
+				$(this).slideDown();
+			});
+		};
+
+
+	});
+
+
 });

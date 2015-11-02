@@ -1,6 +1,6 @@
 .section-name Мобильные телефоны
-.filter
-   ul.filter_options
+form(name="filter", action="filter.php").filter
+   ul.filter_options_category
 
       li.filter_item.filter_item--type
          input(id="flagman",type="checkbox",name="category",value="flagman").filter_item__category--check
@@ -11,10 +11,10 @@
 
 .filter
    .filter_group
-      .filter_header.filter--accordeon Наличие в магазинах
+      .filter_header.filter--accordian Наличие в магазинах
       ul.filter_options
          li.filter_item
-            input(id="AllStore",type="radio",name="check-store",value="AllStore").filter_item--check_radio
+            input(id="AllStore",type="radio",name="check-store",value="AllStore",checked).filter_item--check_radio
             label(for="AllStore").filter_item_radio Во всех магазинах
          li.filter_item
             input(id="NearMe",type="radio",name="check-store",value="NearMe").filter_item--check_radio
@@ -25,95 +25,103 @@
       .filter_header Бренды
       ul.filter_options
          li.filter_item
-            input(id="Lenovo",type="checkbox",name="check-Lenovo",value="Lenovo").filter_item--check
+            input(id="Lenovo",type="checkbox",name="check-mobile-Lenovo",value="Lenovo").filter_item--check
             label(for="Lenovo").filter_item_check-box Lenovo
          li.filter_item
-            input(id="Apple",type="checkbox",name="check-Apple",value="Apple").filter_item--check
+            input(id="Apple",type="checkbox",name="check-mobile-Apple",value="Apple").filter_item--check
             label(for="Apple").filter_item_check-box Apple
          li.filter_item
-            input(id="Samsung",type="checkbox",name="check-Samsung",value="Samsung").filter_item--check
+            input(id="Samsung",type="checkbox",name="check-mobile-Samsung",value="Samsung").filter_item--check
             label(for="Samsung").filter_item_check-box Samsung
          li.filter_item
-            input(id="Asus",type="checkbox",name="check-Asus",value="Asus").filter_item--no_in_store
+            input(id="Asus",type="checkbox",name="check-mobile-Asus",value="Asus").filter_item--no_in_store
             label(for="Asus").filter_item_check-box Asus
          li.filter_item
-            input(id="Motorolla",type="checkbox",name="check-Motorolla",value="Motorolla").filter_item--check
+            input(id="Motorolla",type="checkbox",name="check-mobile-Motorolla",value="Motorolla").filter_item--check
             label(for="Motorolla").filter_item_check-box Motorolla
          li.filter_item
-            a(href="#").button-clear Сбросить фильтр
-
+            input(id="clear-brands",type="button",name="reset-mobiles",value="Сбросить фильтр").button-clear
    .filter_group
       .filter_header Цена
       ul.filter_options
+         li.slider-range
+            .price-from
+               label(for="price-from").price-range-label от
+               input(id="price-from", type="text", name="price-from", placeholder="100").price-range-input
+            .price-to
+               label(for="price-to").price-range-label до
+               input(id="price-to", type="text", name="price-to", placeholder="13000").price-range-input
+         #slider-range-price
 
-   .filter_group.filter_group--colors
+   .filter_group.filter_group
       .filter_header Цвет
-      ul.filter_options_color
-         li.filter_options_color_item
-            input(id="white",type="checkbox",name="white",value="white").filter_item_color--check
-            label(for="white").filter_item_color_check-box__white
+      ul.filter_options
+         .colors-wrapper
+            li.filter_options_color_item
+               input(id="white",type="checkbox",name="white",value="white").filter_item_color--check
+               label(for="white").filter_item_color_check-box__white
 
-         li.filter_options_color_item
-            input(id="grey",type="checkbox",name="grey",value="grey").filter_item_color--check
-            label(for="grey").filter_item_color_check-box__grey
+            li.filter_options_color_item
+               input(id="grey",type="checkbox",name="grey",value="grey").filter_item_color--check
+               label(for="grey").filter_item_color_check-box__grey
 
-         li.filter_options_color_item
-            input(id="black",type="checkbox",name="black",value="black").filter_item_color--check
-            label(for="black").filter_item_color_check-box__black
+            li.filter_options_color_item
+               input(id="black",type="checkbox",name="black",value="black").filter_item_color--check
+               label(for="black").filter_item_color_check-box__black
 
-         li.filter_options_color_item
-            input(id="blue",type="checkbox",name="blue",value="blue").filter_item_color--check
-            label(for="blue").filter_item_color_check-box__blue
+            li.filter_options_color_item
+               input(id="blue",type="checkbox",name="blue",value="blue").filter_item_color--check
+               label(for="blue").filter_item_color_check-box__blue
 
-         li.filter_options_color_item
-            input(id="red",type="checkbox",name="red",value="red").filter_item_color--check
-            label(for="red").filter_item_color_check-box__red
+            li.filter_options_color_item
+               input(id="red",type="checkbox",name="red",value="red").filter_item_color--check
+               label(for="red").filter_item_color_check-box__red
 
-         li.filter_options_color_item
-            input(id="yellow",type="checkbox",name="red",value="yellow").filter_item_color--check
-            label(for="yellow").filter_item_color_check-box__yellow
+            li.filter_options_color_item
+               input(id="yellow",type="checkbox",name="red",value="yellow").filter_item_color--check
+               label(for="yellow").filter_item_color_check-box__yellow
 
-         li.filter_options_color_item
-            input(id="orange",type="checkbox",name="red",value="orange").filter_item_color--check
-            label(for="orange").filter_item_color_check-box__orange
+            li.filter_options_color_item
+               input(id="orange",type="checkbox",name="red",value="orange").filter_item_color--check
+               label(for="orange").filter_item_color_check-box__orange
 
-         li.filter_options_color_item
-            input(id="green",type="checkbox",name="red",value="green").filter_item_color--check
-            label(for="green").filter_item_color_check-box__green
+            li.filter_options_color_item
+               input(id="green",type="checkbox",name="red",value="green").filter_item_color--check
+               label(for="green").filter_item_color_check-box__green
 
-         li.filter_options_color_item
-            input(id="cyan",type="checkbox",name="red",value="cyan").filter_item_color--check
-            label(for="cyan").filter_item_color_check-box__cyan
+            li.filter_options_color_item
+               input(id="cyan",type="checkbox",name="red",value="cyan").filter_item_color--check
+               label(for="cyan").filter_item_color_check-box__cyan
 
-         li.filter_options_color_item
-            input(id="violet",type="checkbox",name="red",value="violet").filter_item_color--check
-            label(for="violet").filter_item_color_check-box__violet
+            li.filter_options_color_item
+               input(id="violet",type="checkbox",name="red",value="violet").filter_item_color--check
+               label(for="violet").filter_item_color_check-box__violet
 
-         li.filter_options_color_item
-            input(id="pink",type="checkbox",name="red",value="pink").filter_item_color--check
-            label(for="pink").filter_item_color_check-box__pink
+            li.filter_options_color_item
+               input(id="pink",type="checkbox",name="red",value="pink").filter_item_color--check
+               label(for="pink").filter_item_color_check-box__pink
 
-         li.filter_options_color_item
-            input(id="brown",type="checkbox",name="red",value="brown").filter_item_color--check
-            label(for="brown").filter_item_color_check-box__brown
+            li.filter_options_color_item
+               input(id="brown",type="checkbox",name="red",value="brown").filter_item_color--check
+               label(for="brown").filter_item_color_check-box__brown
 
    .filter_group
       .filter_header Операционные системы
       ul.filter_options
          li.filter_item
-            input(id="Android",type="checkbox",name="check-Android",value="Android").filter_item--check
+            input(id="Android",type="checkbox",name="check-os-Android",value="Android").filter_item--check
             label(for="Android").filter_item_check-box Android
          li.filter_item
-            input(id="iOS",type="checkbox",name="check-iOS",value="iOS").filter_item--check
+            input(id="iOS",type="checkbox",name="check-os-iOS",value="iOS").filter_item--check
             label(for="iOS").filter_item_check-box iOS
          li.filter_item
-            input(id="Mobile",type="checkbox",name="check-Mobile",value="Mobile").filter_item--check
+            input(id="Mobile",type="checkbox",name="check-os-Mobile",value="Mobile").filter_item--check
             label(for="Mobile").filter_item_check-box Windows Mobile
          li.filter_item
-            input(id="Symbian",type="checkbox",name="check-Symbian",value="Symbian").filter_item--no_in_store
+            input(id="Symbian",type="checkbox",name="check-os-Symbian",value="Symbian").filter_item--no_in_store
             label(for="Symbian").filter_item_check-box Symbian
          li.filter_item
-            input(id="Custom",type="checkbox",name="check-Custom",value="Custom").filter_item--check
+            input(id="Custom",type="checkbox",name="check-os-Custom",value="Custom").filter_item--check
             label(for="Custom").filter_item_check-box Custom
          li.filter_item
-            a(href="#").button-clear Сбросить фильтр
+            input(id="clear-os",type="button",name="reset-os",value="Сбросить фильтр").button-clear

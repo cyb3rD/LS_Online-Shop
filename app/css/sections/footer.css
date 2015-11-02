@@ -3,6 +3,8 @@
   margin-top: -220px;
   height: 220px;
   color: white;
+  background: url("../img/background--footer.png") repeat-x;
+  min-width: 1100px;
 }
 
 .footer-left {
@@ -25,30 +27,50 @@
   height: 42px;
   background-color: #ffffff;
   width: 42px;
+  background-image: url("../img/icons-footer.png");
+}
+
+.socials__footer-link {
+  background-image: url("../img/icons-footer.png");
 }
 
 .link-vk--footer {
-  background: url("/img/icons/vk--footer.png") 50% 50% no-repeat;
   display: block;
   color: white;
-  width: 42px;
   height: 42px;
 }
 
 .link-tw--footer {
-  background: url("/img/icons/tw--footer.png") 50% 50% no-repeat;
   display: block;
   color: white;
-  width: 42px;
   height: 42px;
 }
 
 .link-fb--footer {
-  background: url("/img/icons/fb--footer.png") 50% 50% no-repeat;
   display: block;
   color: white;
-  width: 42px;
   height: 42px;
+}
+
+.link-vk--footer {
+  background-position: 165px -30px;
+}
+.link-vk--footer:hover {
+  background-position: 69px -30px;
+}
+
+.link-fb--footer {
+  background-position: 560px -30px;
+}
+.link-fb--footer:hover {
+  background-position: 469px -30px;
+}
+
+.link-tw--footer {
+  background-position: 370px -30px;
+}
+.link-tw--footer:hover {
+  background-position: 265px -30px;
 }
 
 .links_footer {

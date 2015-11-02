@@ -75,11 +75,39 @@ $header2-height     : 96px;
 //=================================================
 
 // array for modificators
-$socials: vk, tw, fb;
+$socials: vk, fb, tw; //filename
+$icons-spacing: 70px;
+
+@import "icons/*.png";
+//$map: sprite-map('icons/*.png', $spacing: 30px);
 
 @each $social in $socials {
+
   .link-#{$social} {
-    background: url('/img/icons/#{$social}.png') 50% 50% no-repeat;
+    @include icons-sprite(#{$social});
+    //background: url('/img/icons/#{$social}.png') 50% 50% no-repeat;
+    //background-position: 50% 50%;
+  }
+}
+
+.link-vk {
+  background-position: 9px -1284px;
+  &:hover {
+    background-position: 9px -1202px;
+  }
+}
+
+.link-fb {
+  background-position: 10px -339px;
+  &:hover {
+    background-position: 10px -257px;
+  }
+}
+
+.link-tw {
+  background-position: 5px -938px;
+  &:hover {
+    background-position: 5px -856px;
   }
 }
 
@@ -95,14 +123,11 @@ $socials: vk, tw, fb;
 }
 
 .map_icon {
-  background-image: url('/img/icons/map-pin.png');
-  background-repeat: no-repeat;
-  background-position: 0px center;
+  @include icons-sprite('map-pin');
 }
 .phone_icon {
-  background-image: url('/img/icons/telephone.png');
-  background-repeat: no-repeat;
-  background-position: 0px center;
+  @include icons-sprite('telephone');
+  background-position: 0px -589px;
 }
 .contacts__phone {
   margin-right: 0px;

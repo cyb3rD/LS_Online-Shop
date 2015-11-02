@@ -42,16 +42,51 @@
   height: 26px;
 }
 
-.link-vk {
-  background: url("/img/icons/vk.png") 50% 50% no-repeat;
+.icons-sprite, .link-vk, .link-fb, .link-tw, .map_icon, .phone_icon {
+  background-image: url('../../img/icons-sf200e67212.png');
+  background-repeat: no-repeat;
 }
 
-.link-tw {
-  background: url("/img/icons/tw.png") 50% 50% no-repeat;
+.link-vk {
+  background-position: 0 -1290px;
+}
+.link-vk:hover, .link-vk.vk-hover {
+  background-position: 0 -1208px;
 }
 
 .link-fb {
-  background: url("/img/icons/fb.png") 50% 50% no-repeat;
+  background-position: 0 -345px;
+}
+.link-fb:hover, .link-fb.fb-hover {
+  background-position: 0 -263px;
+}
+
+.link-tw {
+  background-position: 0 -944px;
+}
+.link-tw:hover, .link-tw.tw-hover {
+  background-position: 0 -862px;
+}
+
+.link-vk {
+  background-position: 9px -1284px;
+}
+.link-vk:hover {
+  background-position: 9px -1202px;
+}
+
+.link-fb {
+  background-position: 10px -339px;
+}
+.link-fb:hover {
+  background-position: 10px -257px;
+}
+
+.link-tw {
+  background-position: 5px -938px;
+}
+.link-tw:hover {
+  background-position: 5px -856px;
 }
 
 .contacts {
@@ -68,15 +103,12 @@
 }
 
 .map_icon {
-  background-image: url("/img/icons/map-pin.png");
-  background-repeat: no-repeat;
-  background-position: 0px center;
+  background-position: 0 -427px;
 }
 
 .phone_icon {
-  background-image: url("/img/icons/telephone.png");
-  background-repeat: no-repeat;
-  background-position: 0px center;
+  background-position: 0 -594px;
+  background-position: 0px -589px;
 }
 
 .contacts__phone {

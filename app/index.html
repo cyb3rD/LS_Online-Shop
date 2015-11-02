@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="Cooltech интернет магазин">
 		<meta name="keywords" content="планшеты, ноутбуки, смартфоны">
 		<meta name="author" content="Nikolay Ignatyev">
@@ -12,6 +12,8 @@
 		<link rel="stylesheet" href="bower/normalize-css/normalize.css">
 		<!-- Dev CSS-->
 		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/select2.css">
+		<link rel="stylesheet" href="css/jquery-ui.css">
 		<!-- Fonts & favicon-->
 		<link rel="stylesheet" href="fonts/opensans/opensans.css">
 		<link rel="stylesheet" href="fonts/fontawesome/font-awesome.min.css">
@@ -32,8 +34,8 @@
 					<div class="container">
 						<!-- Social icons-->
 						<ul class="socials socials--header">
-							<li class="socials__item"><a href="" class="social__item link-vk">vk</a></li>
 							<li class="socials__item"><a href="" class="social__item link-fb">fb</a></li>
+							<li class="socials__item"><a href="" class="social__item link-vk">vk</a></li>
 							<li class="socials__item"><a href="" class="social__item link-tw">tw</a></li>
 						</ul>
 						<!-- Contacts-->
@@ -83,8 +85,8 @@
 						<li class="breadcrumbs_item"><a href="#" class="breadcrumbs_link breadcrumbs_link--location">Каталог</a></li>
 					</ul>
 					<div class="section-name">Мобильные телефоны</div>
-					<div class="filter">
-						<ul class="filter_options">
+					<form name="filter" action="filter.php" class="filter">
+						<ul class="filter_options_category">
 							<li class="filter_item filter_item--type">
 								<input id="flagman" type="checkbox" name="category" value="flagman" class="filter_item__category--check">
 								<label for="flagman" class="category_name filter_item_check-box__hidden">Флагманы</label>
@@ -94,13 +96,13 @@
 								<label for="cheap" class="category_name filter_item_check-box__hidden">Бюджетная линейка</label>
 							</li>
 						</ul>
-					</div>
+					</form>
 					<div class="filter">
 						<div class="filter_group">
-							<div class="filter_header filter--accordeon">Наличие в магазинах</div>
+							<div class="filter_header filter--accordian">Наличие в магазинах</div>
 							<ul class="filter_options">
 								<li class="filter_item">
-									<input id="AllStore" type="radio" name="check-store" value="AllStore" class="filter_item--check_radio">
+									<input id="AllStore" type="radio" name="check-store" value="AllStore" checked class="filter_item--check_radio">
 									<label for="AllStore" class="filter_item_radio">Во всех магазинах</label>
 								</li>
 								<li class="filter_item">
@@ -113,109 +115,127 @@
 							<div class="filter_header">Бренды</div>
 							<ul class="filter_options">
 								<li class="filter_item">
-									<input id="Lenovo" type="checkbox" name="check-Lenovo" value="Lenovo" class="filter_item--check">
+									<input id="Lenovo" type="checkbox" name="check-mobile-Lenovo" value="Lenovo" class="filter_item--check">
 									<label for="Lenovo" class="filter_item_check-box">Lenovo</label>
 								</li>
 								<li class="filter_item">
-									<input id="Apple" type="checkbox" name="check-Apple" value="Apple" class="filter_item--check">
+									<input id="Apple" type="checkbox" name="check-mobile-Apple" value="Apple" class="filter_item--check">
 									<label for="Apple" class="filter_item_check-box">Apple</label>
 								</li>
 								<li class="filter_item">
-									<input id="Samsung" type="checkbox" name="check-Samsung" value="Samsung" class="filter_item--check">
+									<input id="Samsung" type="checkbox" name="check-mobile-Samsung" value="Samsung" class="filter_item--check">
 									<label for="Samsung" class="filter_item_check-box">Samsung</label>
 								</li>
 								<li class="filter_item">
-									<input id="Asus" type="checkbox" name="check-Asus" value="Asus" class="filter_item--no_in_store">
+									<input id="Asus" type="checkbox" name="check-mobile-Asus" value="Asus" class="filter_item--no_in_store">
 									<label for="Asus" class="filter_item_check-box">Asus</label>
 								</li>
 								<li class="filter_item">
-									<input id="Motorolla" type="checkbox" name="check-Motorolla" value="Motorolla" class="filter_item--check">
+									<input id="Motorolla" type="checkbox" name="check-mobile-Motorolla" value="Motorolla" class="filter_item--check">
 									<label for="Motorolla" class="filter_item_check-box">Motorolla</label>
 								</li>
-								<li class="filter_item"><a href="#" class="button-clear">Сбросить фильтр</a></li>
+								<li class="filter_item">
+									<input id="clear-brands" type="button" name="reset-mobiles" value="Сбросить фильтр" class="button-clear">
+								</li>
 							</ul>
 						</div>
 						<div class="filter_group">
 							<div class="filter_header">Цена</div>
-							<ul class="filter_options"></ul>
+							<ul class="filter_options">
+								<li class="slider-range">
+									<div class="price-from">
+										<label for="price-from" class="price-range-label">от</label>
+										<input id="price-from" type="text" name="price-from" placeholder="100" class="price-range-input">
+									</div>
+									<div class="price-to">
+										<label for="price-to" class="price-range-label">до</label>
+										<input id="price-to" type="text" name="price-to" placeholder="13000" class="price-range-input">
+									</div>
+								</li>
+								<div id="slider-range-price"></div>
+							</ul>
 						</div>
-						<div class="filter_group filter_group--colors">
+						<div class="filter_group filter_group">
 							<div class="filter_header">Цвет</div>
-							<ul class="filter_options_color">
-								<li class="filter_options_color_item">
-									<input id="white" type="checkbox" name="white" value="white" class="filter_item_color--check">
-									<label for="white" class="filter_item_color_check-box__white"></label>
-								</li>
-								<li class="filter_options_color_item">
-									<input id="grey" type="checkbox" name="grey" value="grey" class="filter_item_color--check">
-									<label for="grey" class="filter_item_color_check-box__grey"></label>
-								</li>
-								<li class="filter_options_color_item">
-									<input id="black" type="checkbox" name="black" value="black" class="filter_item_color--check">
-									<label for="black" class="filter_item_color_check-box__black"></label>
-								</li>
-								<li class="filter_options_color_item">
-									<input id="blue" type="checkbox" name="blue" value="blue" class="filter_item_color--check">
-									<label for="blue" class="filter_item_color_check-box__blue"></label>
-								</li>
-								<li class="filter_options_color_item">
-									<input id="red" type="checkbox" name="red" value="red" class="filter_item_color--check">
-									<label for="red" class="filter_item_color_check-box__red"></label>
-								</li>
-								<li class="filter_options_color_item">
-									<input id="yellow" type="checkbox" name="red" value="yellow" class="filter_item_color--check">
-									<label for="yellow" class="filter_item_color_check-box__yellow"></label>
-								</li>
-								<li class="filter_options_color_item">
-									<input id="orange" type="checkbox" name="red" value="orange" class="filter_item_color--check">
-									<label for="orange" class="filter_item_color_check-box__orange"></label>
-								</li>
-								<li class="filter_options_color_item">
-									<input id="green" type="checkbox" name="red" value="green" class="filter_item_color--check">
-									<label for="green" class="filter_item_color_check-box__green"></label>
-								</li>
-								<li class="filter_options_color_item">
-									<input id="cyan" type="checkbox" name="red" value="cyan" class="filter_item_color--check">
-									<label for="cyan" class="filter_item_color_check-box__cyan"></label>
-								</li>
-								<li class="filter_options_color_item">
-									<input id="violet" type="checkbox" name="red" value="violet" class="filter_item_color--check">
-									<label for="violet" class="filter_item_color_check-box__violet"></label>
-								</li>
-								<li class="filter_options_color_item">
-									<input id="pink" type="checkbox" name="red" value="pink" class="filter_item_color--check">
-									<label for="pink" class="filter_item_color_check-box__pink"></label>
-								</li>
-								<li class="filter_options_color_item">
-									<input id="brown" type="checkbox" name="red" value="brown" class="filter_item_color--check">
-									<label for="brown" class="filter_item_color_check-box__brown"></label>
-								</li>
+							<ul class="filter_options">
+								<div class="colors-wrapper">
+									<li class="filter_options_color_item">
+										<input id="white" type="checkbox" name="white" value="white" class="filter_item_color--check">
+										<label for="white" class="filter_item_color_check-box__white"></label>
+									</li>
+									<li class="filter_options_color_item">
+										<input id="grey" type="checkbox" name="grey" value="grey" class="filter_item_color--check">
+										<label for="grey" class="filter_item_color_check-box__grey"></label>
+									</li>
+									<li class="filter_options_color_item">
+										<input id="black" type="checkbox" name="black" value="black" class="filter_item_color--check">
+										<label for="black" class="filter_item_color_check-box__black"></label>
+									</li>
+									<li class="filter_options_color_item">
+										<input id="blue" type="checkbox" name="blue" value="blue" class="filter_item_color--check">
+										<label for="blue" class="filter_item_color_check-box__blue"></label>
+									</li>
+									<li class="filter_options_color_item">
+										<input id="red" type="checkbox" name="red" value="red" class="filter_item_color--check">
+										<label for="red" class="filter_item_color_check-box__red"></label>
+									</li>
+									<li class="filter_options_color_item">
+										<input id="yellow" type="checkbox" name="red" value="yellow" class="filter_item_color--check">
+										<label for="yellow" class="filter_item_color_check-box__yellow"></label>
+									</li>
+									<li class="filter_options_color_item">
+										<input id="orange" type="checkbox" name="red" value="orange" class="filter_item_color--check">
+										<label for="orange" class="filter_item_color_check-box__orange"></label>
+									</li>
+									<li class="filter_options_color_item">
+										<input id="green" type="checkbox" name="red" value="green" class="filter_item_color--check">
+										<label for="green" class="filter_item_color_check-box__green"></label>
+									</li>
+									<li class="filter_options_color_item">
+										<input id="cyan" type="checkbox" name="red" value="cyan" class="filter_item_color--check">
+										<label for="cyan" class="filter_item_color_check-box__cyan"></label>
+									</li>
+									<li class="filter_options_color_item">
+										<input id="violet" type="checkbox" name="red" value="violet" class="filter_item_color--check">
+										<label for="violet" class="filter_item_color_check-box__violet"></label>
+									</li>
+									<li class="filter_options_color_item">
+										<input id="pink" type="checkbox" name="red" value="pink" class="filter_item_color--check">
+										<label for="pink" class="filter_item_color_check-box__pink"></label>
+									</li>
+									<li class="filter_options_color_item">
+										<input id="brown" type="checkbox" name="red" value="brown" class="filter_item_color--check">
+										<label for="brown" class="filter_item_color_check-box__brown"></label>
+									</li>
+								</div>
 							</ul>
 						</div>
 						<div class="filter_group">
 							<div class="filter_header">Операционные системы</div>
 							<ul class="filter_options">
 								<li class="filter_item">
-									<input id="Android" type="checkbox" name="check-Android" value="Android" class="filter_item--check">
+									<input id="Android" type="checkbox" name="check-os-Android" value="Android" class="filter_item--check">
 									<label for="Android" class="filter_item_check-box">Android</label>
 								</li>
 								<li class="filter_item">
-									<input id="iOS" type="checkbox" name="check-iOS" value="iOS" class="filter_item--check">
+									<input id="iOS" type="checkbox" name="check-os-iOS" value="iOS" class="filter_item--check">
 									<label for="iOS" class="filter_item_check-box">iOS</label>
 								</li>
 								<li class="filter_item">
-									<input id="Mobile" type="checkbox" name="check-Mobile" value="Mobile" class="filter_item--check">
+									<input id="Mobile" type="checkbox" name="check-os-Mobile" value="Mobile" class="filter_item--check">
 									<label for="Mobile" class="filter_item_check-box">Windows Mobile</label>
 								</li>
 								<li class="filter_item">
-									<input id="Symbian" type="checkbox" name="check-Symbian" value="Symbian" class="filter_item--no_in_store">
+									<input id="Symbian" type="checkbox" name="check-os-Symbian" value="Symbian" class="filter_item--no_in_store">
 									<label for="Symbian" class="filter_item_check-box">Symbian</label>
 								</li>
 								<li class="filter_item">
-									<input id="Custom" type="checkbox" name="check-Custom" value="Custom" class="filter_item--check">
+									<input id="Custom" type="checkbox" name="check-os-Custom" value="Custom" class="filter_item--check">
 									<label for="Custom" class="filter_item_check-box">Custom</label>
 								</li>
-								<li class="filter_item"><a href="#" class="button-clear">Сбросить фильтр</a></li>
+								<li class="filter_item">
+									<input id="clear-os" type="button" name="reset-os" value="Сбросить фильтр" class="button-clear">
+								</li>
 							</ul>
 						</div>
 					</div>
@@ -229,26 +249,41 @@
 								<option value="по популярности">по популярности</option>
 							</select>
 						</div>
+						<div class="list-view-header-caption list-view-header-caption--change-view">Вид каталога</div>
 						<div class="list-view-header-choose-type">
 							<ul class="list-view__choose">
-								<li class="list-view__choose_list">Вид каталога</li>
-								<li class="list-view__choose_list"><a href="#" class="list-view__img"><img src="/img/view-list-2.png" alt="preview" class="img--align-center"></a></li>
-								<li class="list-view__choose_list"><a href="#" class="list-view__img"><img src="/img/view-thumbnail.png" alt="thumbnail" class="img--align-center"></a></li>
-								<li class="list-view__choose_list"><a href="#" class="list-view__img"><img src="/img/view-list.png" alt="list" class="img--align-center"></a></li>
+								<!--li.list-view__choose_list-->
+								<!--   |Вид каталога-->
+								<li class="list-view__choose_list">
+									<div class="list-view__img list-view__img--preview">
+										<!--img(src="/img/view-list-2.png" alt="preview").img--align-center-->
+									</div>
+								</li>
+								<li class="list-view__choose_list">
+									<div class="list-view__img list-view__img--thumbnail list-view__img--thumbnail-active">
+										<!--img(src="/img/view-thumbnail.png" alt="thumbnail").img--align-center-->
+									</div>
+								</li>
+								<li class="list-view__choose_list">
+									<div class="list-view__img list-view__img--list">
+										<!--img(src="/img/view-list.png" alt="list").img--align-center-->
+										
+									</div>
+								</li>
 							</ul>
 						</div>
 					</div>
 					<!--Created by nikolay on 26.10.2015.
 					-->
 					<!---->
-					<div class="container_items items--hide">
+					<div id="mosaic" class="container_items">
 						<ul class="catalog">
 												<li class="catalog_item catalog_item--default-view">
-													<div class="catalog_item_image"><img src="/img/01.png" alt="model01"></div>
+													<div class="catalog_item_image"><img src="/img/01.png" alt="model01" class="catalog_item_icons__big-foto"></div>
 													<ul class="catalog_item_icons">
-														<li class="catalog_item_icons__preview"><img src="/img/01-01.png" alt="01"></li>
-														<li class="catalog_item_icons__preview"><img src="/img/01-02.png" alt="02"></li>
-														<li class="catalog_item_icons__preview"><img src="/img/01-03.png" alt="03"></li>
+														<li class="catalog_item_icons__preview"><img src="/img/01-01.png" alt="01" class="catalog_item_icons__preview--foto-small"></li>
+														<li class="catalog_item_icons__preview"><img src="/img/01-02.png" alt="02" class="catalog_item_icons__preview--foto-small"></li>
+														<li class="catalog_item_icons__preview"><img src="/img/01-03.png" alt="03" class="catalog_item_icons__preview--foto-small"></li>
 													</ul>
 													<ul class="catalog_item_info">
 														<li class="catalog_item__model_name">Samsung GT-I9301I GALAXY S 3</li>
@@ -281,11 +316,11 @@
 													<button class="add-to-basket">В корзину</button>
 												</li>
 												<li class="catalog_item catalog_item--default-view">
-													<div class="catalog_item_image"><img src="/img/02.png" alt="model01"></div>
+													<div class="catalog_item_image"><img src="/img/02.png" alt="model01" class="catalog_item_icons__big-foto"></div>
 													<ul class="catalog_item_icons">
-														<li class="catalog_item_icons__preview"><img src="/img/02-01.png" alt="01"></li>
-														<li class="catalog_item_icons__preview"><img src="/img/02-02.png" alt="02"></li>
-														<li class="catalog_item_icons__preview"><img src="/img/02-03.png" alt="03"></li>
+														<li class="catalog_item_icons__preview"><img src="/img/02-01.png" alt="01" class="catalog_item_icons__preview--foto-small"></li>
+														<li class="catalog_item_icons__preview"><img src="/img/02-02.png" alt="02" class="catalog_item_icons__preview--foto-small"></li>
+														<li class="catalog_item_icons__preview"><img src="/img/02-03.png" alt="03" class="catalog_item_icons__preview--foto-small"></li>
 													</ul>
 													<ul class="catalog_item_info">
 														<li class="catalog_item__model_name">Microsoft Lumia 640 RM-1077</li>
@@ -318,11 +353,11 @@
 													<button class="add-to-basket">В корзину</button>
 												</li>
 												<li class="catalog_item catalog_item--default-view">
-													<div class="catalog_item_image"><img src="/img/03.png" alt="model01"></div>
+													<div class="catalog_item_image"><img src="/img/03.png" alt="model01" class="catalog_item_icons__big-foto"></div>
 													<ul class="catalog_item_icons">
-														<li class="catalog_item_icons__preview"><img src="/img/03-01.png" alt="01"></li>
-														<li class="catalog_item_icons__preview"><img src="/img/03-02.png" alt="02"></li>
-														<li class="catalog_item_icons__preview"><img src="/img/03-03.png" alt="03"></li>
+														<li class="catalog_item_icons__preview"><img src="/img/03-01.png" alt="01" class="catalog_item_icons__preview--foto-small"></li>
+														<li class="catalog_item_icons__preview"><img src="/img/03-02.png" alt="02" class="catalog_item_icons__preview--foto-small"></li>
+														<li class="catalog_item_icons__preview"><img src="/img/03-03.png" alt="03" class="catalog_item_icons__preview--foto-small"></li>
 													</ul>
 													<ul class="catalog_item_info">
 														<li class="catalog_item__model_name">Archos 50 Oxygen Plus</li>
@@ -355,11 +390,11 @@
 													<button class="add-to-basket">В корзину</button>
 												</li>
 												<li class="catalog_item catalog_item--default-view">
-													<div class="catalog_item_image"><img src="/img/02.png" alt="model01"></div>
+													<div class="catalog_item_image"><img src="/img/02.png" alt="model01" class="catalog_item_icons__big-foto"></div>
 													<ul class="catalog_item_icons">
-														<li class="catalog_item_icons__preview"><img src="/img/02-01.png" alt="01"></li>
-														<li class="catalog_item_icons__preview"><img src="/img/02-02.png" alt="02"></li>
-														<li class="catalog_item_icons__preview"><img src="/img/02-03.png" alt="03"></li>
+														<li class="catalog_item_icons__preview"><img src="/img/02-01.png" alt="01" class="catalog_item_icons__preview--foto-small"></li>
+														<li class="catalog_item_icons__preview"><img src="/img/02-02.png" alt="02" class="catalog_item_icons__preview--foto-small"></li>
+														<li class="catalog_item_icons__preview"><img src="/img/02-03.png" alt="03" class="catalog_item_icons__preview--foto-small"></li>
 													</ul>
 													<ul class="catalog_item_info">
 														<li class="catalog_item__model_name">Microsoft Lumia 640 RM-1077</li>
@@ -392,11 +427,11 @@
 													<button class="add-to-basket">В корзину</button>
 												</li>
 												<li class="catalog_item catalog_item--default-view">
-													<div class="catalog_item_image"><img src="/img/01.png" alt="model01"></div>
+													<div class="catalog_item_image"><img src="/img/01.png" alt="model01" class="catalog_item_icons__big-foto"></div>
 													<ul class="catalog_item_icons">
-														<li class="catalog_item_icons__preview"><img src="/img/01-01.png" alt="01"></li>
-														<li class="catalog_item_icons__preview"><img src="/img/01-02.png" alt="02"></li>
-														<li class="catalog_item_icons__preview"><img src="/img/01-03.png" alt="03"></li>
+														<li class="catalog_item_icons__preview"><img src="/img/01-01.png" alt="01" class="catalog_item_icons__preview--foto-small"></li>
+														<li class="catalog_item_icons__preview"><img src="/img/01-02.png" alt="02" class="catalog_item_icons__preview--foto-small"></li>
+														<li class="catalog_item_icons__preview"><img src="/img/01-03.png" alt="03" class="catalog_item_icons__preview--foto-small"></li>
 													</ul>
 													<ul class="catalog_item_info">
 														<li class="catalog_item__model_name">Samsung GT-I9301I GALAXY S 3</li>
@@ -429,11 +464,11 @@
 													<button class="add-to-basket">В корзину</button>
 												</li>
 												<li class="catalog_item catalog_item--default-view">
-													<div class="catalog_item_image"><img src="/img/03.png" alt="model01"></div>
+													<div class="catalog_item_image"><img src="/img/03.png" alt="model01" class="catalog_item_icons__big-foto"></div>
 													<ul class="catalog_item_icons">
-														<li class="catalog_item_icons__preview"><img src="/img/03-01.png" alt="01"></li>
-														<li class="catalog_item_icons__preview"><img src="/img/03-02.png" alt="02"></li>
-														<li class="catalog_item_icons__preview"><img src="/img/03-03.png" alt="03"></li>
+														<li class="catalog_item_icons__preview"><img src="/img/03-01.png" alt="01" class="catalog_item_icons__preview--foto-small"></li>
+														<li class="catalog_item_icons__preview"><img src="/img/03-02.png" alt="02" class="catalog_item_icons__preview--foto-small"></li>
+														<li class="catalog_item_icons__preview"><img src="/img/03-03.png" alt="03" class="catalog_item_icons__preview--foto-small"></li>
 													</ul>
 													<ul class="catalog_item_info">
 														<li class="catalog_item__model_name">Archos 50 Oxygen Plus</li>
@@ -466,11 +501,11 @@
 													<button class="add-to-basket">В корзину</button>
 												</li>
 												<li class="catalog_item catalog_item--default-view">
-													<div class="catalog_item_image"><img src="/img/01.png" alt="model01"></div>
+													<div class="catalog_item_image"><img src="/img/01.png" alt="model01" class="catalog_item_icons__big-foto"></div>
 													<ul class="catalog_item_icons">
-														<li class="catalog_item_icons__preview"><img src="/img/01-01.png" alt="01"></li>
-														<li class="catalog_item_icons__preview"><img src="/img/01-02.png" alt="02"></li>
-														<li class="catalog_item_icons__preview"><img src="/img/01-03.png" alt="03"></li>
+														<li class="catalog_item_icons__preview"><img src="/img/01-01.png" alt="01" class="catalog_item_icons__preview--foto-small"></li>
+														<li class="catalog_item_icons__preview"><img src="/img/01-02.png" alt="02" class="catalog_item_icons__preview--foto-small"></li>
+														<li class="catalog_item_icons__preview"><img src="/img/01-03.png" alt="03" class="catalog_item_icons__preview--foto-small"></li>
 													</ul>
 													<ul class="catalog_item_info">
 														<li class="catalog_item__model_name">Samsung GT-I9301I GALAXY S 3</li>
@@ -503,11 +538,11 @@
 													<button class="add-to-basket">В корзину</button>
 												</li>
 												<li class="catalog_item catalog_item--default-view">
-													<div class="catalog_item_image"><img src="/img/02.png" alt="model01"></div>
+													<div class="catalog_item_image"><img src="/img/02.png" alt="model01" class="catalog_item_icons__big-foto"></div>
 													<ul class="catalog_item_icons">
-														<li class="catalog_item_icons__preview"><img src="/img/02-01.png" alt="01"></li>
-														<li class="catalog_item_icons__preview"><img src="/img/02-02.png" alt="02"></li>
-														<li class="catalog_item_icons__preview"><img src="/img/02-03.png" alt="03"></li>
+														<li class="catalog_item_icons__preview"><img src="/img/02-01.png" alt="01" class="catalog_item_icons__preview--foto-small"></li>
+														<li class="catalog_item_icons__preview"><img src="/img/02-02.png" alt="02" class="catalog_item_icons__preview--foto-small"></li>
+														<li class="catalog_item_icons__preview"><img src="/img/02-03.png" alt="03" class="catalog_item_icons__preview--foto-small"></li>
 													</ul>
 													<ul class="catalog_item_info">
 														<li class="catalog_item__model_name">Microsoft Lumia 640 RM-1077</li>
@@ -540,11 +575,11 @@
 													<button class="add-to-basket">В корзину</button>
 												</li>
 												<li class="catalog_item catalog_item--default-view">
-													<div class="catalog_item_image"><img src="/img/03.png" alt="model01"></div>
+													<div class="catalog_item_image"><img src="/img/03.png" alt="model01" class="catalog_item_icons__big-foto"></div>
 													<ul class="catalog_item_icons">
-														<li class="catalog_item_icons__preview"><img src="/img/03-01.png" alt="01"></li>
-														<li class="catalog_item_icons__preview"><img src="/img/03-02.png" alt="02"></li>
-														<li class="catalog_item_icons__preview"><img src="/img/03-03.png" alt="03"></li>
+														<li class="catalog_item_icons__preview"><img src="/img/03-01.png" alt="01" class="catalog_item_icons__preview--foto-small"></li>
+														<li class="catalog_item_icons__preview"><img src="/img/03-02.png" alt="02" class="catalog_item_icons__preview--foto-small"></li>
+														<li class="catalog_item_icons__preview"><img src="/img/03-03.png" alt="03" class="catalog_item_icons__preview--foto-small"></li>
 													</ul>
 													<ul class="catalog_item_info">
 														<li class="catalog_item__model_name">Archos 50 Oxygen Plus</li>
@@ -578,7 +613,7 @@
 												</li>
 						</ul>
 					</div>
-					<div class="container_items table-thumbnail-view items--hide">
+					<div id="thumbs" class="container_items table-thumbnail-view items--hide">
 						<ul class="catalog_item item-in-table">
 							<li class="col-1">
 								<div class="catalog_item_image"><img src="/img/01.png" alt="model01"></div>
@@ -690,7 +725,7 @@
 							</li>
 						</ul>
 					</div>
-					<div class="container_items">
+					<div id="list" class="container_items items--hide">
 						<div class="table-thumbnail-view">
 							<div class="catalog_item item-in-table item--in-row-list">
 								<div class="catalog_item_prod_info prod-info-in-table">
@@ -763,45 +798,45 @@
 				</aside>
 			</div>
 			<div class="container">
-				<div class="section-name">Важная информация</div>
-				<div class="important-col-1">
-					<p class="important-text">
-						Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс
-						внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем
-						настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание
-						модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки
-						модели развития.
-					</p>
-					<p class="important-text">
-						Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций,
-						занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют
-						определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за
-						собой процесс внедрения и модернизации соответствующий условий активизации.
-					</p>
-					<p class="important-text">
-						Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить
-						значение соответствующий условий активизации. С другой стороны сложившаяся структура организации позволяет
-						оценить значение системы обучения кадров, соответствует насущным потребностям.
-					</p>
-				</div>
-				<div class="important-col-2">
-					<p class="important-text">
-						Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс
-						внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем
-						настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание
-						модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки
-						модели развития.
-					</p>
-					<p class="important-text">
-						Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций,
-						занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют
-						определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет
-						за собой процесс внедрения и модернизации соответствующий условий активизации.
-					</p>
-					<p class="important-text">
-						Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить
-						значение соответствующий условий активизации. С другой стороны сложившаяся
-					</p>
+				<div class="section-name">Важная информация
+					<div class="important-text-wrapper">
+						<p class="important-text">
+							Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс
+							внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем
+							настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание
+							модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки
+							модели развития.
+						</p>
+						<p class="important-text">
+							Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций,
+							занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют
+							определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за
+							собой процесс внедрения и модернизации соответствующий условий активизации.
+						</p>
+						<p class="important-text">
+							Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить
+							значение соответствующий условий активизации. С другой стороны сложившаяся структура организации позволяет
+							оценить значение системы обучения кадров, соответствует насущным потребностям.
+						</p>
+						<!--.important-col-2-->
+						<p class="important-text">
+							Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс
+							внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем
+							настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание
+							модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки
+							модели развития.
+						</p>
+						<p class="important-text">
+							Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций,
+							занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют
+							определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет
+							за собой процесс внедрения и модернизации соответствующий условий активизации.
+						</p>
+						<p class="important-text">
+							Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить
+							значение соответствующий условий активизации. С другой стороны сложившаяся
+						</p>
+					</div>
 				</div>
 				<!--Created by nikolay on 26.10.2015.
 				-->
@@ -814,9 +849,9 @@
 				</div>
 				<div class="footer-right">
 					<ul class="socials socials--footer">
-						<li class="socials__item socials__item--footer"><a href="" class="link-vk--footer">vk</a></li>
-						<li class="socials__item socials__item--footer"><a href="" class="link-fb--footer">fb</a></li>
-						<li class="socials__item socials__item--footer"><a href="" class="link-tw--footer">tw</a></li>
+						<li class="socials__item socials__item--footer"><a href="" class="socials__footer-link link-fb--footer">fb</a></li>
+						<li class="socials__item socials__item--footer"><a href="" class="socials__footer-link link-vk--footer">vk</a></li>
+						<li class="socials__item socials__item--footer"><a href="" class="socials__footer-link link-tw--footer">tw</a></li>
 					</ul>
 					<ul class="links_footer">
 						<li class="links__item links__item_footer"><a href="#" class="link_footer">Планшеты</a></li>
@@ -832,5 +867,9 @@
 			<div class="copyright">All rights reserved. 2015. no copy allowed</div>
 		</footer>
 		<script type="text/javascript" src="bower/jquery/jquery.min.js"></script>
+		<script type="text/javascript" src="js/select2.min.js"></script>
+		<script type="text/javascript" src="js/jquery.columnizer.js"></script>
+		<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
 	</body>
 </html>
